@@ -6,7 +6,7 @@ import React from 'react';
 const Hero = () => {
     return (
         <div className="uk-cover-container">
-            <img src="../images/clement-falize-9uNFBOXBEBc-unsplash_optimized.jpg" alt="watercolor background" />
+            <img src={require("../images/pawel-czerwinski-QRghuf5yTA4-unsplash_optimized.jpg")} alt="watercolor background" />
         </div>
     )
 }
