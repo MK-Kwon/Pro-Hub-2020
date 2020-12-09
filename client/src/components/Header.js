@@ -6,6 +6,7 @@ import Payments from './Payments'
 class Header extends Component {
 
     renderContent() {
+
         switch (this.props.auth) {
             case null:
                 return;
@@ -22,14 +23,16 @@ class Header extends Component {
         }
     }
 
+
     render() {
         return (
             <nav>
                 <div className="nav-wrapper">
-                    <Link style={{ margin: "0 10px", fontSize: "20px" }}
+                    <Link style={{ margin: "0 20px", fontSize: "2rem" }}
                         to={this.props.auth ? '/surveys' : '/'}
                         className="left-brand-logo">
-                        Oauth Template
+                        <img src={require("../images/ProHubLogo.png")} alt="typing on laptop" style={{ width: "40px" }} />
+                        Pro Hub 2020
                     </Link>
                     <ul id="nav-mobile" className="right">
                         {this.renderContent()}
