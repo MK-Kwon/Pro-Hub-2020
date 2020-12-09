@@ -28,11 +28,11 @@ class Header extends Component {
         return (
             <nav>
                 <div className="nav-wrapper">
-                    <Link style={{ margin: "0 20px", fontSize: "2rem" }}
+                    <Link style={{ margin: "0 20px", fontSize: "1.2rem" }}
                         to={this.props.auth ? '/surveys' : '/'}
                         className="left-brand-logo">
                         <img src={require("../images/ProHubLogo.png")} alt="typing on laptop" style={{ width: "40px" }} />
-                        Pro Hub 2020
+                        Home
                     </Link>
                     <ul id="nav-mobile" className="right">
                         {this.renderContent()}
