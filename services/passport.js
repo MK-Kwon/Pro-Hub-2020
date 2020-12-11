@@ -20,19 +20,25 @@ passport.deserializeUser((id, done) => {
 passport.use(
     new GoogleStrategy(
         {
-            clientID: keys.googleClientID,
-            clientSecret: keys.googleClientSecret,
-            callbackURL: '/auth/google/callback',
-            proxy: true
+          clientID: keys.googleClientID,
+          clientSecret: keys.googleClientSecret,
+          callbackURL: '/auth/google/callback',
+          proxy: true
         },
         async (accessToken, refreshToken, profile, done) => {
-            const existingUser = await User.findOne({ googleId: profile.id })
-            if (existingUser) {
-                return done(null, existingUser);
-            }
-            const user = await new User({ googleId: profile.id }).save()
-            done(null, user)
-
+          console.log(profile)
+          const existingUser = await User.findOne({ googleId: profile.id })
+          if (existingUser) {
+            return done(null, existingUser);
+          }
+          const user = await new User({
+            googleId: profile.id,
+            name: profile.name,
+            picture: profile.picture,
+            email: profile.email,
+          }).save()
+          done(null, user)
+    
         }
     )
 );

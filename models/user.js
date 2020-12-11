@@ -6,9 +6,17 @@ const userSchema = new Schema({
     credits: {
       type: Number,
       default: 0
-    }
+    },
+    username: String,
+    name: String,
+    email: String,
+    image: String,
+    location: String,
+    skills: Array,
+    description: String,
+    Team_id: String
 });
 
-mongoose.model('users', userSchema);
+const User = mongoose.model('users', userSchema);
 
 module.exports = User; 
