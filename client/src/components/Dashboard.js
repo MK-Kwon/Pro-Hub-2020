@@ -15,7 +15,7 @@ const Dashboard = props => {
       return (
         <div>
           <Container>
-            <div className="uk-card uk-card-default uk-width-1-2@m">
+            <div className="uk-card uk-card-default uk-width-1-2@m" style={{ margin:"auto" }}>
               <div className="uk-card-header">
                 <div className="uk-grid-small uk-flex-middle uk-grid">
                   <div className="uk-width-auto">
