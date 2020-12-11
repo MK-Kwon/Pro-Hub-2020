@@ -36,10 +36,10 @@ const Dashboard = props => {
                 <p>skills</p>
               </div>
             </div>
-            <p style={{ margin: "auto" }}>
+         <p style={{ margin: "auto" }}>
           <button className="uk-button uk-button-default uk-button-large" style={{ color: "white" }}><Link to="/createteam">CreateTeam</Link></button>
           <button className="uk-button uk-button-primary uk-button-large" style={{ color: "white" }}><Link to="/searchteam">Search Team</Link></button>
-            </p>
+         </p>
           </Container>
         </div>
         );
