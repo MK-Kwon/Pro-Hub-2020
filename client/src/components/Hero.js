@@ -21,7 +21,7 @@ const Hero = () => {
                 <a className="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next">{"⇛"}</a>
             </div>
 
-            <p>Find real-life team members for any project you can dream of. Co-Lab is here for those who prefer face-to-face interaction. Create an account and start searching for your perfect team-mates today.</p>
+            <h5>Find real-life team members for any project you plan of. Pro-Hub-2020 is here for those who want to form a perfect team. Create an account and start searching today!</h5>
         </div>
     )
 
