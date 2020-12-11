@@ -3,6 +3,9 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 import Dashboard from './Dashboard';
+import CreateTeam from './CreateTeam';
+import SearchTeam from './SearchTeam';
+import SearchUsers from './SearchUsers';
 
 import Header from './Header'
 import Landing from './Landing'

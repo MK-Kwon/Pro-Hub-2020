@@ -29,7 +29,7 @@ class Header extends Component {
             <nav>
                 <div className="nav-wrapper">
                     <Link style={{ margin: "0 20px", fontSize: "1.2rem" }}
-                        to={this.props.auth ? '/surveys' : '/'}
+                        to={'/dashboard'}
                         className="left-brand-logo">
                         <img src={require("../images/ProHubLogo.png")} alt="typing on laptop" style={{ width: "40px" }} />
                         Home
