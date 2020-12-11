@@ -3,7 +3,7 @@
 * {
     font-family: 'Spartan';
     margin: 0;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 body{
@@ -24,7 +24,9 @@ body{
     color: white;
     text-shadow: 1px 2px rgba(33,33,33, 0.664);
 }
+
 h1, h5{
+  
     color: white;
     font-weight: 300 !important;
 }
@@ -33,6 +35,39 @@ a:hover{
     text-decoration: none;
     color: #4377ca;
 }
+
+
+#profileContainer {
+    margin-top: 15px;
+}
+
+#profileName{
+    color: white;
+}
+
+#profileCard {
+    background-color: rgba(33,33,33, 0.5);
+    color: white;
+    min-height: 500px;
+}
+
+.nav-wrapper {
+    background-color: #bb799d;
+} 
+
+#createTeamBtn, #searchTeamBtn {
+    display: block !important;
+    margin: 10px auto 10px auto !important;
+    border-radius: 5px !important;
+    box-shadow: 1px 2px rgba(33,33,33, 0.5);
+    width: 100%;
+    background-color: #ffffffda;
+}
+
+#footer{
+    color: white;
+    text-align: center;
+    line-height: 70px;
 
 .nav-wrapper {
     background-color: #bb799d;
