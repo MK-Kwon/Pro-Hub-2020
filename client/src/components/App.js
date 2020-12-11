@@ -6,6 +6,7 @@ import Dashboard from './Dashboard';
 import CreateTeam from './CreateTeam';
 import SearchTeam from './SearchTeam';
 import SearchUsers from './SearchUsers';
+import Footer from './Footer';
 
 import Header from './Header'
 import Landing from './Landing'
@@ -27,6 +28,7 @@ class App extends Component {
                         <Route exact path="/" component={Landing} />
                         <Route exact path="/dashboard" component={Dashboard} />
                         <Route path="/surveys/new" component={SurveyNew} />
+                        <Footer />
                     </div>
                 </BrowserRouter>
             </div>

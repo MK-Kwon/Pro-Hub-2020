@@ -5,44 +5,46 @@ import { Link } from "react-router-dom";
 
 const Dashboard = props => {
 
-    async function get_user_data() {
-        const res = await fetch('/api/current_user')
-        const json = await res.json()
-        console.log(json.email)
-      }
-      get_user_data();
-    
-    
-      return (
-        <div>
-          <Container>
-            <div className="uk-card uk-card-default uk-width-1-2@m">
-              <div className="uk-card-header">
-                <div className="uk-grid-small uk-flex-middle uk-grid">
-                  <div className="uk-width-auto">
-                    <img className="uk-border-circle" width="40" height="40" src=""></img>
-                  </div>
-                  <div className="uk-width-expand">
-                    <h3 className="uk-card-title uk-margin-remove-bottom">Name</h3>
-                    <p className="uk-text-meta uk-margin-remove-top">Location</p>
-    
-                  </div>
-                </div>
+  async function get_user_data() {
+    const res = await fetch('/api/current_user')
+    const json = await res.json()
+    console.log(json.email)
+  }
+  get_user_data();
+
+
+  return (
+    <div id="profileContainer">
+      <Container>
+        <div id="profileCard" className="uk-card uk-card-default uk-width-1-1@m" style={{ margin: "auto" }}>
+          <div className="uk-card-header">
+            <div className="uk-grid-medium uk-flex-middle uk-grid">
+              <div className="uk-width-auto">
+                <img className="uk-border-circle" width="40" height="40" alt="profile pic" src="https://picsum.photos/200"></img>
               </div>
-              <div className="uk-card-body">
-                <p>github username</p>
-                <p>email</p>
-                <p>bio</p>
-                <p>skills</p>
+              <div className="uk-width-expand">
+                <h2 id="profileName" className="uk-card-title uk-margin-remove-bottom">Name</h2>
+                <p className="uk-text-meta uk-margin-remove-top">Location</p>
+
               </div>
             </div>
-         <p style={{ margin: "auto" }}>
-          <button className="uk-button uk-button-default uk-button-large" style={{ color: "white" }}><Link to="/createteam">CreateTeam</Link></button>
-          <button className="uk-button uk-button-primary uk-button-large" style={{ color: "white" }}><Link to="/searchteam">Search Team</Link></button>
-         </p>
-          </Container>
+          </div>
+          <div className="uk-card-body">
+            <p>Github username</p>
+            <p>Email</p>
+            <hr></hr>
+            <p>Bio</p>
+            <hr></hr>
+            <p>Skills</p>
+          </div>
         </div>
-        );
+        <div id="buttonContainer">
+          <button id="createTeamBtn" className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m" ><Link to="/createteam">Create Team</Link></button>
+          <button id="searchTeamBtn" className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m" ><Link to="/searchteam">Search Team</Link></button>
+        </div>
+      </Container>
+    </div>
+  );
 }
 
 export default Dashboard;
