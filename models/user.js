@@ -14,7 +14,7 @@ const userSchema = new Schema({
     location: String,
     skills: Array,
     description: String,
-    Team_id: String
+    //Team_id: String
 });
 
 const User = mongoose.model('users', userSchema);
