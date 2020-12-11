@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Container from '@material-ui/core/Container';
+import { Link } from "react-router-dom";
 
 const Dashboard = props => {
 
@@ -35,10 +36,10 @@ const Dashboard = props => {
                 <p>skills</p>
               </div>
             </div>
-            <p uk-margin>
-              <button className="uk-button uk-button-default uk-button-large">Create Team</button>
-              <button className="uk-button uk-button-primary uk-button-large">Search Team</button>
-            </p>
+         <p style={{ margin: "auto" }}>
+          <button className="uk-button uk-button-default uk-button-large" style={{ color: "white" }}><Link to="/createteam">CreateTeam</Link></button>
+          <button className="uk-button uk-button-primary uk-button-large" style={{ color: "white" }}><Link to="/searchteam">Search Team</Link></button>
+         </p>
           </Container>
         </div>
         );
