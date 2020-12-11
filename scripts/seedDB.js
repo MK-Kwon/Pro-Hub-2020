@@ -17,7 +17,7 @@ const userSeed = [
     location: "NSW",
     skills: ["React", "NodeJS", "AWS", "Photoshop", "Illustrator", "JavaScript"],
     description: "Web Developer",
-    Team_id: "Dreamteam"
+    //Team_id: "Dreamteam"
   },
   {
     googleId: "432994",
@@ -29,7 +29,7 @@ const userSeed = [
     location: "QLD",
     skills: ["Dot Net Developing", "Application Developing"],
     description: "Software Developer",
-    Team_id: "Dreamteam"
+    //Team_id: "Dreamteam"
   },
   {
     googleId: "932301",
@@ -41,7 +41,7 @@ const userSeed = [
     location: "WA",
     skills: ["Full Stack Developing", "Graphic Design"],
     description: "Software Developer",
-    Team_id: "MyTeam"
+    //Team_id: "MyTeam"
   },
   {
     googleId: "123994",
@@ -53,21 +53,21 @@ const userSeed = [
     location: "SA",
     skills: ["NodeJS", "JavaScript", ".Net Developing"],
     description: "Web Developer",
-    Team_id: "MyTeam"
+    //Team_id: "MyTeam"
   }
 ]
 
 
 const teamSeed = [
   {
-    _id: "Dreamteam",
+    name: "Dreamteam",
     numMembers: 3,
     teamDesc: "the dream team",
     teamLoc: "Australia",
     image: "img1"
   },
   {
-    _id: "MyTeam",
+    name: "MyTeam",
     numMembers: 4,
     teamDesc: "my team",
     teamLoc: "Australia",
