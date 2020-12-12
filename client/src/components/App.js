@@ -3,6 +3,10 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 import Dashboard from './Dashboard';
+import CreateTeam from './CreateTeam';
+import SearchTeam from './SearchTeam';
+import SearchUsers from './SearchUsers';
+import Footer from './Footer';
 
 import Header from './Header'
 import Landing from './Landing'
@@ -22,12 +26,23 @@ class App extends Component {
                     <div>
                         <Header />
                         <Route exact path="/" component={Landing} />
-                        <Route exact path="/dashboard" component={Dashboard} />
+                        <Route exact path="/dashboard" value={this.props} component={Dashboard} />
                         <Route path="/surveys/new" component={SurveyNew} />
+                        <Route path="/createteam" component={CreateTeam} />
+                        <Route path="/searchteam" component={SearchTeam} />
+                        <Route path="/searchusers" component={SearchUsers} />
+                        <Footer />
                     </div>
                 </BrowserRouter>
             </div>
         );
     };
 }
-export default connect(null, actions)(App); 
+
+function mapStateToProps({ auth }) {
+    // console.log()
+    return { auth }
+  }
+
+export default connect(mapStateToProps, actions)(App); 
+  
