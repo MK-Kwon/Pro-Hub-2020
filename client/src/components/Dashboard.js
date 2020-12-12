@@ -41,7 +41,6 @@ const Dashboard = props => {
               <div className="uk-width-expand">
               <h2 id="profileName" className="uk-card-title uk-margin-remove-bottom">{auth.first_name} {auth.last_name}</h2>
                 <p className="uk-text-meta uk-margin-remove-top">Location</p>
-
               </div>
             </div>
           </div>
