@@ -6,17 +6,28 @@ import { Link } from "react-router-dom";
 const CreateTeam = props => {
 
     return (
-        <div>
+        <div className="contentContainer">
             <Container>
-                <h1>Create your Team!</h1>
-                <p style={{ margin: "auto" }}>
-                    <button className="uk-button uk-button-default uk-button-large" style={{ color: "white" }}><Link to="/dashboard">Back to Dashboard</Link></button>
-                    <button className="uk-button uk-button-primary uk-button-large"><Link to="/searchusers">Submit Team</Link></button>
-                </p>
+            <div id="createTeamContainer">
+                    <h1>Create your Team!</h1>
+                    <hr></hr>
+                    {/* Needs to be a form */}
+                    <div>
+                        <p>Team Name</p>
+                        <p>Team Lead</p>
+
+                        <p>Description</p>
+
+                        <p>Location</p>
+                    </div>
+                </div>
+                <div id="buttonContainer">
+                    <button className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" ><Link to="/dashboard">Back to Dashboard</Link></button>
+                    <button className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" ><Link to="/searchusers">Submit Team</Link></button>
+                </div>
             </Container>
         </div>
     );
-
 }
 
 export default CreateTeam; 

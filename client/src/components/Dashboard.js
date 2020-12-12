@@ -14,7 +14,7 @@ const Dashboard = props => {
 
 
   return (
-    <div id="profileContainer">
+    <div className="contentContainer">
       <Container>
         <div id="profileCard" className="uk-card uk-card-default uk-width-1-1@m" style={{ margin: "auto" }}>
           <div className="uk-card-header">
@@ -38,8 +38,8 @@ const Dashboard = props => {
           </div>
         </div>
         <div id="buttonContainer">
-          <button id="createTeamBtn" className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m" ><Link to="/createteam">Create Team</Link></button>
-          <button id="searchTeamBtn" className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m" ><Link to="/searchteam">Search Team</Link></button>
+        <button className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" ><Link to="/createteam">Create Team</Link></button>
+          <button className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" ><Link to="/searchteam">Search Team</Link></button>
         </div>
       </Container>
     </div>

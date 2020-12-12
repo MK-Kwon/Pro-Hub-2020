@@ -37,7 +37,8 @@ a:hover{
 }
 
 
-#profileContainer {
+.contentContainer  {
+  
     margin-top: 15px;
 }
 
@@ -52,10 +53,10 @@ a:hover{
 }
 
 .nav-wrapper {
-    background-color: #bb799d;
+    background-color: #ff9292bb;
 } 
 
-#createTeamBtn, #searchTeamBtn {
+.buttons {
     display: block !important;
     margin: 10px auto 10px auto !important;
     border-radius: 5px !important;
@@ -64,11 +65,15 @@ a:hover{
     background-color: #ffffffda;
 }
 
-#footer{
-    color: white;
+#footer {
     text-align: center;
     line-height: 70px;
 
+p {
+    color:white;
+=======
+
 .nav-wrapper {
     background-color: #bb799d;
+
 } 
