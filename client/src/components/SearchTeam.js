@@ -12,8 +12,8 @@ const CreateTeam = props => {
             <Container>
                 <h1>Search for a team</h1>
                 <p style={{ margin: "auto"}}>
-                    <button className="uk-button uk-button-default uk-button-large" style={{color: "white"}}><Link to="/dashboard">Back to Dashboard</Link></button>
-                    <button className="uk-button uk-button-primary uk-button-large" style={{color: "white"}}><Link to="/dashboard">Join Team</Link></button>
+                <Link to="/dashboard"><button className="uk-button uk-button-default uk-button-large" style={{ color: "white" }}>Back to Dashboard</button></Link>
+                    <Link to="/dashboard"><button className="uk-button uk-button-primary uk-button-large" style={{ color: "white" }}>Join Team</button></Link>
                 </p>
             </Container>
         </div>
