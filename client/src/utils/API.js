@@ -2,6 +2,9 @@ import axios from "axios";
 
 export default {
   // Gets all books
+  
+  axios.get("/api/current_user");
+  
   getBooks: function() {
     return axios.get("/api/books");
   },
@@ -16,5 +19,6 @@ export default {
   // Saves a book to the database
   saveBook: function(bookData) {
     return axios.post("/api/books", bookData);
+
   }
 };
