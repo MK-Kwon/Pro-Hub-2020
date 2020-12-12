@@ -8,7 +8,7 @@ const CreateTeam = props => {
     return (
         <div>
             <Container>
-                <h1>Create your Team!</h1>
+                <h1 className="pageTitle">Create your Team!</h1>
                 <p style={{ margin: "auto" }}>
                     <button className="uk-button uk-button-default uk-button-large" style={{ color: "white" }}><Link to="/dashboard">Back to Dashboard</Link></button>
                     <button className="uk-button uk-button-primary uk-button-large"><Link to="/searchusers">Submit Team</Link></button>

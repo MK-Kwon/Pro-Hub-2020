@@ -2,23 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Container from '@material-ui/core/Container';
 import { Link } from "react-router-dom";
-
-//We need to make the join team button generate an updated table for the user and display it on user dash. User also needs to be added to the roster for the team on Mongoose DB
-
-const CreateTeam = props => {
-
+// This page should cycle through users.
+const SearchUsers = props => {
     return (
         <div>
             <Container>
-                <h1>Search for a team</h1>
-                <p style={{ margin: "auto"}}>
-                    <button className="uk-button uk-button-default uk-button-large" style={{color: "white"}}><Link to="/dashboard">Back to Dashboard</Link></button>
-                    <button className="uk-button uk-button-primary uk-button-large" style={{color: "white"}}><Link to="/dashboard">Join Team</Link></button>
-                </p>
+                <h1 className="pageTitle">Find Team-Mates</h1>
+                <div className="finderContainer">
+                    <img id="searchImage" src="https://via.placeholder.com/500" alt="user profile"></img>
+
+                    <p style={{ margin: "auto" }}>
+                        <Link to="/dashboard"><button className="uk-button uk-button-secondary uk-button-large buttons" style={{ color: "white" }}>Back to Dashboard</button></Link>
+                        <Link to="/emailUser"><button className="uk-button uk-button-secondary uk-button-large buttons">Ask them to join</button></Link>
+                    </p>
+                </div>
             </Container>
         </div>
     );
-
 }
-
-export default CreateTeam; 
+export default SearchUsers;
