@@ -1,9 +1,12 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import Container from '@material-ui/core/Container';
-import { Link } from "react-router-dom";
-import { connect } from 'react-redux';
-import * as actions from '../actions';
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
+import Container from '@material-ui/core/Container'
+import { Link } from "react-router-dom"
+import { connect } from 'react-redux'
+import * as actions from '../actions'
+import { motion } from "framer-motion"
+
+
 const Dashboard = props => {
   // async function get_user_data() {
   //   const res = await fetch('/api/current_user')
@@ -22,9 +25,34 @@ const Dashboard = props => {
   //     return props.auth.email;
   //   }
   // }
+
+  const pageVariants = {
+    initial: {
+      opacity: 0,
+      y: "-100vw",
+      scale: 0.8
+    },
+    in: {
+      opacity: 1,
+      y: 0,
+      scale: 1
+    },
+    out: {
+      opacity: 0,
+      y: "100vw",
+      scale: 1.2
+    }
+  };
+
   const auth = props.auth || {};
+
+
   return (
-    <div className="contentContainer">
+    <motion.div initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariants} className="contentContainer" className="contentContainer">
+
       <Container>
         <div id="profileCard" className="uk-card uk-card-default uk-width-1-1@m" style={{ margin: "auto" }}>
           <div className="uk-card-header">
@@ -49,12 +77,15 @@ const Dashboard = props => {
           </div>
         </div>
         <div id="buttonContainer">
-          <Link to="/createteam"><button className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Create Team</button></Link>
-          <Link to="/searchteam"><button className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Search Team</button></Link>
+          <Link to="/createteam"><motion.button whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }} className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Create Team</motion.button></Link>
+          <Link to="/searchteam"><motion.button whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }} className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Search Team</motion.button></Link>
         </div>
       </Container>
-    </div>
+    </motion.div>
   );
+
 }
 function get_user_data({ auth }) {
   return { auth }
