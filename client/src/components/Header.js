@@ -27,7 +27,7 @@ class Header extends Component {
     render() {
         return (
             <nav>
-                <div className="nav-wrapper uk-sticky">
+                <div className="nav-wrapper">
                     <Link style={{ margin: "0 20px", fontSize: "1.2rem" }}
                         to={'/dashboard'}
                         className="left-brand-logo">
