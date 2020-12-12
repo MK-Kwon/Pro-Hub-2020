@@ -13,7 +13,19 @@ const Dashboard = props => {
   //   console.log(json.email)
   // }
   // get_user_data();
-  console.log(props)
+
+  // console.log(props.auth)
+  // // const email = props.auth.email ? props.auth.email : "Email"
+  // const email = "Email"
+  // const is_not_null = (email) => {
+  //   if (email === null) {
+  //     return "Not Avaiable";
+  //   }
+  //   else {
+  //     return props.auth.email;
+  //   }
+  // }
+  const auth = props.auth || {};
 
 
   return (
@@ -24,10 +36,10 @@ const Dashboard = props => {
           <div className="uk-card-header">
             <div className="uk-grid-medium uk-flex-middle uk-grid">
               <div className="uk-width-auto">
-                <img className="uk-border-circle" width="40" height="40" alt="profile pic" src="https://picsum.photos/200"></img>
+                <img className="uk-border-circle" width="40" height="40" alt="profile pic" src={auth.photo}></img>
               </div>
               <div className="uk-width-expand">
-                <h2 id="profileName" className="uk-card-title uk-margin-remove-bottom">Name</h2>
+              <h2 id="profileName" className="uk-card-title uk-margin-remove-bottom">{auth.first_name} {auth.last_name}</h2>
                 <p className="uk-text-meta uk-margin-remove-top">Location</p>
 
               </div>
@@ -37,6 +49,7 @@ const Dashboard = props => {
             <p>Github username</p>
             <p>Email</p>
             <hr></hr>
+            <p>{auth.email}</p>
             <p>Bio</p>
             <hr></hr>
             <p>Skills</p>
