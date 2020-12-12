@@ -26,8 +26,11 @@ class App extends Component {
                     <div>
                         <Header />
                         <Route exact path="/" component={Landing} />
-                        <Route exact path="/dashboard" component={Dashboard} />
+                        <Route exact path="/dashboard" value={this.props} component={Dashboard} />
                         <Route path="/surveys/new" component={SurveyNew} />
+                        <Route path="/createteam" component={CreateTeam} />
+                        <Route path="/searchteam" component={SearchTeam} />
+                        <Route path="/searchusers" component={SearchUsers} />
                         <Footer />
                     </div>
                 </BrowserRouter>
@@ -35,4 +38,11 @@ class App extends Component {
         );
     };
 }
-export default connect(null, actions)(App); 
+
+function mapStateToProps({ auth }) {
+    // console.log()
+    return { auth }
+  }
+
+export default connect(mapStateToProps, actions)(App); 
+  

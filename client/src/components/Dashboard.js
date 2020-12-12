@@ -2,19 +2,23 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Container from '@material-ui/core/Container';
 import { Link } from "react-router-dom";
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 
 const Dashboard = props => {
 
-  async function get_user_data() {
-    const res = await fetch('/api/current_user')
-    const json = await res.json()
-    console.log(json.email)
-  }
-  get_user_data();
+  // async function get_user_data() {
+  //   const res = await fetch('/api/current_user')
+  //   const json = await res.json()
+  //   console.log(json.email)
+  // }
+  // get_user_data();
+  console.log(props)
 
 
   return (
     <div className="contentContainer">
+      {/* {console.log(props)} */}
       <Container>
         <div id="profileCard" className="uk-card uk-card-default uk-width-1-1@m" style={{ margin: "auto" }}>
           <div className="uk-card-header">
@@ -47,4 +51,8 @@ const Dashboard = props => {
   );
 }
 
-export default Dashboard;
+function get_user_data({ auth }) {
+  return { auth }
+}
+
+export default connect(get_user_data, actions)(Dashboard); 
