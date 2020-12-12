@@ -39,7 +39,7 @@ const Dashboard = props => {
                 <img className="uk-border-circle" width="40" height="40" alt="profile pic" src={auth.photo}></img>
               </div>
               <div className="uk-width-expand">
-              <h2 id="profileName" className="uk-card-title uk-margin-remove-bottom">{auth.first_name} {auth.last_name}</h2>
+                <h2 id="profileName" className="uk-card-title uk-margin-remove-bottom">{auth.first_name} {auth.last_name}</h2>
                 <p className="uk-text-meta uk-margin-remove-top">Location</p>
               </div>
             </div>
@@ -55,8 +55,8 @@ const Dashboard = props => {
           </div>
         </div>
         <div id="buttonContainer">
-        <button className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" ><Link to="/createteam">Create Team</Link></button>
-          <button className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" ><Link to="/searchteam">Search Team</Link></button>
+          <Link to="/createteam"><button className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Create Team</button></Link>
+          <Link to="/searchteam"><button className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Search Team</button></Link>
         </div>
       </Container>
     </div>

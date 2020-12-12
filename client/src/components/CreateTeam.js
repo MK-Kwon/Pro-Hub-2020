@@ -8,7 +8,7 @@ const CreateTeam = props => {
     return (
         <div className="contentContainer">
             <Container>
-            <div id="createTeamContainer">
+                <div id="createTeamContainer">
                     <h1>Create your Team!</h1>
                     <hr></hr>
                     {/* Needs to be a form */}
@@ -22,8 +22,8 @@ const CreateTeam = props => {
                     </div>
                 </div>
                 <div id="buttonContainer">
-                    <button className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" ><Link to="/dashboard">Back to Dashboard</Link></button>
-                    <button className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" ><Link to="/searchusers">Submit Team</Link></button>
+                    <Link to="/dashboard"><button className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Back to Dashboard</button></Link>
+                    <Link to="/searchusers"> <button className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Submit Team</button></Link>
                 </div>
             </Container>
         </div>
