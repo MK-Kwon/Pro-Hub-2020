@@ -70,7 +70,8 @@ p{
 }
 
 .finderContainer {
-margin: 0 auto;
+    margin: 0 auto;
+    display: table;
 }
 
 input {
