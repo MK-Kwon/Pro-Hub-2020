@@ -31,8 +31,7 @@ const SearchUsers = props => {
             exit="out"
             variants={pageVariants} >
             <Container>
-
-                <h1 className="pageTitle">Find Team-Mates</h1>
+              <h1 className="pageTitle">Find Team-Mates</h1>
                 <div className="finderContainer">
                     <img id="searchImage" src="https://via.placeholder.com/500" alt="user profile"></img>
 
