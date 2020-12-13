@@ -2,10 +2,12 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Container from '@material-ui/core/Container'
 import { Link } from "react-router-dom"
-import { motion } from "framer-motion"
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 
 
 const CreateTeam = props => {
+
     const pageVariants = {
         initial: {
             opacity: 0,
@@ -72,4 +74,10 @@ const CreateTeam = props => {
         </motion.div>
     );
 }
-export default CreateTeam;
+
+// export default CreateTeam;
+function get_user_data({ auth }) {
+  return { auth }
+}
+
+export default connect(get_user_data, actions)(CreateTeam); 
