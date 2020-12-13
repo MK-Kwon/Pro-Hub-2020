@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Spartan&display=swap');
-
 * {
     font-family: 'Spartan';
     margin: 0;
@@ -19,14 +18,13 @@ body{
 
 #hero {
     margin-top: 10px;
-    background-color: rgba(33,33,33, 0.5);
+    background-color: rgba(33, 33, 33, 0.664);
     text-align: center;
     color: white;
     text-shadow: 1px 2px rgba(33,33,33, 0.664);
 }
 
 h1, h5{
-  
     color: white;
     font-weight: 300 !important;
 }
@@ -36,9 +34,7 @@ a:hover{
     color: #4377ca;
 }
 
-
 .contentContainer  {
-  
     margin-top: 15px;
 }
 
@@ -54,6 +50,10 @@ a:hover{
 
 .nav-wrapper {
     background-color: #ff9292bb;
+}
+
+.buttons {
+    background-color: #252525da !important;
 } 
 
 .buttons {
@@ -62,8 +62,31 @@ a:hover{
     border-radius: 5px !important;
     box-shadow: 1px 2px rgba(33,33,33, 0.5);
     width: 100%;
-    background-color: #ffffffda;
 }
+
+#createTeamContainer{
+    background-color: rgba(33,33,33, 0.5);
+    padding: 10px;
+}
+#footer{
+    text-align: center;
+    line-height: 70px;
+}
+p{
+    color:white;
+}
+
+.pageTitle{
+    text-align: center;
+}
+
+.finderContainer {
+margin: 0 auto;
+}
+
+.searchImage{
+    display: table;
+    margin: 0 auto;
 
 #footer {
     text-align: center;
@@ -75,12 +98,9 @@ p {
 } 
 
 .pageTitle{
-  
     text-align: center;
-  
 }
 
 .nav-wrapper {
     background-color: #bb799d;
-
 } 

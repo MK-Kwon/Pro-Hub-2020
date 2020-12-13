@@ -5,54 +5,14 @@ import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 
+
 const Dashboard = props => {
-
-    async function get_user_data() {
-        const res = await fetch('/api/current_user')
-        const json = await res.json()
-        console.log(json.email)
-      }
-      get_user_data();
-    
-    
-      return (
-        <div>
-          <Container>
-            <div className="uk-card uk-card-default uk-width-1-2@m">
-              <div className="uk-card-header">
-                <div className="uk-grid-small uk-flex-middle uk-grid">
-                  <div className="uk-width-auto">
-                    <img className="uk-border-circle" width="40" height="40" src=""></img>
-                  </div>
-                  <div className="uk-width-expand">
-                    <h3 className="uk-card-title uk-margin-remove-bottom">Name</h3>
-                    <p className="uk-text-meta uk-margin-remove-top">Location</p>
-    
-                  </div>
-                </div>
-              </div>
-              <div className="uk-card-body">
-                <p>github username</p>
-                <p>email</p>
-                <p>bio</p>
-                <p>skills</p>
-              </div>
-            </div>
-            <p uk-margin>
-              <button className="uk-button uk-button-default uk-button-large">Create Team</button>
-              <button className="uk-button uk-button-primary uk-button-large">Search Team</button>
-            </p>
-          </Container>
-        </div>
-        );
-
   // async function get_user_data() {
   //   const res = await fetch('/api/current_user')
   //   const json = await res.json()
   //   console.log(json.email)
   // }
   // get_user_data();
-
   // console.log(props.auth)
   // // const email = props.auth.email ? props.auth.email : "Email"
   // const email = "Email"
@@ -64,6 +24,25 @@ const Dashboard = props => {
   //     return props.auth.email;
   //   }
   // }
+
+  const pageVariants = {
+    initial: {
+      opacity: 0,
+      y: "-100vw",
+      scale: 0.8
+    },
+    in: {
+      opacity: 1,
+      y: 0,
+      scale: 1
+    },
+    out: {
+      opacity: 0,
+      y: "100vw",
+      scale: 1.2
+    }
+  };
+
   const auth = props.auth || {};
 
 
@@ -84,13 +63,15 @@ const Dashboard = props => {
             </div>
           </div>
           <div className="uk-card-body">
-            <p>Github username</p>
-            <p>Email</p>
+            <p>Github username: </p>
             <hr></hr>
+            <p>Email: {auth.email}</p>
             <p>{auth.email}</p>
             <p>Bio</p>
             <hr></hr>
-            <p>Skills</p>
+            <p>Bio: </p>
+            <hr></hr>
+            <p>Skills: </p>
           </div>
         </div>
         <div id="buttonContainer">
@@ -98,12 +79,12 @@ const Dashboard = props => {
           <Link to="/searchteam"><button className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Search Team</button></Link>
         </div>
       </Container>
-    </div>
+    </motion.div>
   );
-}
 
 function get_user_data({ auth }) {
   return { auth }
 }
 
 export default connect(get_user_data, actions)(Dashboard); 
+

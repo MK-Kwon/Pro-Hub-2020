@@ -11,8 +11,9 @@ const userSeed = [
     googleId: "398230",
     credits: 20,
     username: "user1",
+    first_name: "Jessica",
+    last_name: "Thomson",
     first_name: "Jessica", 
-    surname: "Thomson",
     email: "j.thomson@user.com",
     photo: "img1",
     location: "NSW",
@@ -25,7 +26,7 @@ const userSeed = [
     credits: 20,
     username: "user2",
     first_name: "Mohammed",
-    surname: "Patel",
+    last_name:"Patel",
     email: "m.patel@user.com",
     photo: "img2",
     location: "QLD",
@@ -38,7 +39,7 @@ const userSeed = [
     credits: 20,
     username: "user3",
     first_name: "James",
-    surname: "Jean",
+    last_name: "Jean",
     email: "j.jean@user.com",
     photo: "img3",
     location: "WA",
@@ -51,7 +52,7 @@ const userSeed = [
     credits: 20,
     username: "user4",
     first_name: "Kate",
-    surname: "Kim",
+    last_name: "Kim",
     email: "k.kate@user.com",
     photo: "img4",
     location: "SA",
@@ -68,14 +69,16 @@ const teamSeed = [
     numMembers: 3,
     teamDesc: "the dream team",
     teamLoc: "Australia",
-    image: "img1"
+    image: "img1",
+    users: []
   },
   {
     name: "MyTeam",
     numMembers: 4,
     teamDesc: "my team",
     teamLoc: "Australia",
-    image: "img2"
+    image: "img2",
+    users: []
   }
 ]
 

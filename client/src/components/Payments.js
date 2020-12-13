@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import StripeCheckout from 'react-stripe-checkout';
 import { connect } from 'react-redux'
 import * as actions from '../actions'
+import { motion } from "framer-motion"
 
 class Payments extends Component {
     render() {
@@ -14,11 +15,11 @@ class Payments extends Component {
                 stripeKey={process.env.REACT_APP_STRIPE_KEY}
             >
                 <button className="btn">
-                    Add Credits
+                    Donate Here!
                 </button>
             </StripeCheckout>
         );
     }
 }
 
-export default connect(null, actions) (Payments); 
+export default connect(null, actions)(Payments); 
