@@ -2,14 +2,17 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const teamSchema = new Schema({
-    _id: {
+    name: {
         type: String,
         unique: true
     },
-    numMembers: Number,
-    teamDesc: String,
-    teamLoc: String,
-    image: String
+    image: String,
+    users: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "users"
+        }
+    ]
 });
 
 const Team = mongoose.model('Team', teamSchema);
