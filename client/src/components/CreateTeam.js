@@ -7,7 +7,6 @@ import * as actions from '../actions';
 
 
 const CreateTeam = props => {
-
     const pageVariants = {
         initial: {
             opacity: 0,
