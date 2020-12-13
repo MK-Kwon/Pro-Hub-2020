@@ -9,6 +9,7 @@ import { usePosition } from 'use-position';
 
 
 const CreateTeam = props => {
+
   const pageVariants = {
     initial: {
       opacity: 0,
