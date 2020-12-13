@@ -1,75 +1,35 @@
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
-import Container from '@material-ui/core/Container'
-import { Link } from "react-router-dom"
-import { connect } from 'react-redux'
-import * as actions from '../actions'
-import { motion } from "framer-motion"
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import Container from '@material-ui/core/Container';
+import { Link } from "react-router-dom";
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 
 
 const Dashboard = props => {
-  // async function get_user_data() {
-  //   const res = await fetch('/api/current_user')
-  //   const json = await res.json()
-  //   console.log(json.email)
-  // }
-  // get_user_data();
-  // console.log(props.auth)
-  // // const email = props.auth.email ? props.auth.email : "Email"
-  // const email = "Email"
-  // const is_not_null = (email) => {
-  //   if (email === null) {
-  //     return "Not Avaiable";
-  //   }
-  //   else {
-  //     return props.auth.email;
-  //   }
-  // }
 
-  const pageVariants = {
-    initial: {
-      opacity: 0,
-      y: "-100vw",
-      scale: 0.8
-    },
-    in: {
-      opacity: 1,
-      y: 0,
-      scale: 1
-    },
-    out: {
-      opacity: 0,
-      y: "100vw",
-      scale: 1.2
-    }
-  };
+  const user = props.auth || {};
 
-  const auth = props.auth || {};
-
-
-  return (
-    <motion.div initial="initial"
-      animate="in"
-      exit="out"
-      variants={pageVariants} className="contentContainer" className="contentContainer">
-
+   return (
+    <div className="contentContainer">
       <Container>
         <div id="profileCard" className="uk-card uk-card-default uk-width-1-1@m" style={{ margin: "auto" }}>
           <div className="uk-card-header">
             <div className="uk-grid-medium uk-flex-middle uk-grid">
               <div className="uk-width-auto">
-                <img className="uk-border-circle" width="40" height="40" alt="profile pic" src={auth.photo}></img>
+                <img className="uk-border-circle" width="40" height="40" alt="profile pic" src={user.photo}></img>
               </div>
               <div className="uk-width-expand">
-                <h2 id="profileName" className="uk-card-title uk-margin-remove-bottom">{auth.first_name} {auth.last_name}</h2>
+                <h2 id="profileName" className="uk-card-title uk-margin-remove-bottom">{user.first_name} {user.last_name}</h2>
                 <p className="uk-text-meta uk-margin-remove-top">Location</p>
+
               </div>
             </div>
           </div>
           <div className="uk-card-body">
             <p>Github username: </p>
             <hr></hr>
-            <p>Email: {auth.email}</p>
+            <p>Email: {user.email}</p>
             <hr></hr>
             <p>Bio: </p>
             <hr></hr>
@@ -77,15 +37,12 @@ const Dashboard = props => {
           </div>
         </div>
         <div id="buttonContainer">
-          <Link to="/createteam"><motion.button whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }} className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Create Team</motion.button></Link>
-          <Link to="/searchteam"><motion.button whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }} className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Search Team</motion.button></Link>
+          <Link to="/createteam"><button className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Create Team</button></Link>
+          <Link to="/searchteam"><button className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Search Team</button></Link>
         </div>
       </Container>
-    </motion.div>
+    </div>
   );
-
 }
 function get_user_data({ auth }) {
   return { auth }

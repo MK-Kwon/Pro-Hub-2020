@@ -62,7 +62,7 @@ a:hover{
     line-height: 70px;
 }
 p{
-    color:white;
+    color: #e5e5e5;
 }
 
 .pageTitle{
@@ -73,7 +73,46 @@ p{
 margin: 0 auto;
 }
 
-.searchImage{
-    display: table;
-    margin: 0 auto;
-} 
+input {
+    color: #e5e5e5;
+}
+  
+#description_t {
+    border: 1px solid #9e9e9e;
+    resize: none;
+    height: 100px;
+    color: #e5e5e5;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 16px;
+}
+  
+#description_t:focus {
+    outline: 0;
+    border: 2px #26a69a solid
+}
+  
+#team_form_d {
+    padding: 10px;
+}
+  
+#add_current_location_b {
+    /* padding: 10px; */
+    width: 25%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 5px 0px;
+}
+  
+#spinbox_i {
+    width: 15%;
+}
+  
+input[type=number] {
+    height: 40px;
+}
+
+input[type=number]:hover::-webkit-inner-spin-button {
+    width: 14px;
+    height: 40px;
+  }
