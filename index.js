@@ -25,6 +25,9 @@ app.use(passport.session());
 
 require('./routes/authRoutes.js')(app);
 require('./routes/billingRoutes.js')(app);
+require('./routes/api/teamRoutes.js/index.js')(app);
+require('./routes/api/userRoutes.js/index.js')(app);
+
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'))
