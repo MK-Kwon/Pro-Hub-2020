@@ -24,7 +24,7 @@ const CreateTeam = props => {
             scale: 1.2
         }
     };
-
+  
     return (
       animations
         <motion.div initial="initial"
@@ -76,7 +76,7 @@ const CreateTeam = props => {
 
 // export default CreateTeam;
 function get_user_data({ auth }) {
-  return { auth }
+    return { auth }
 }
 
 export default connect(get_user_data, actions)(CreateTeam); 

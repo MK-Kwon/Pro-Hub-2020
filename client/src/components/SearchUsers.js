@@ -11,7 +11,7 @@ const SearchUsers = props => {
     const pageVariants = {
         initial: {
             opacity: 0,
-            x: "-100vw",
+            x: "100vw",
             scale: 0.8
         },
         in: {
@@ -21,7 +21,7 @@ const SearchUsers = props => {
         },
         out: {
             opacity: 0,
-            x: "100vw",
+            x: "-100vw",
             scale: 1.2
         }
     };
