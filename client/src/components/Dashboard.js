@@ -1,10 +1,9 @@
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
-import Container from '@material-ui/core/Container'
-import { Link } from "react-router-dom"
-import { connect } from 'react-redux'
-import * as actions from '../actions'
-import { motion } from "framer-motion"
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import Container from '@material-ui/core/Container';
+import { Link } from "react-router-dom";
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 
 
 const Dashboard = props => {
@@ -48,11 +47,8 @@ const Dashboard = props => {
 
 
   return (
-    <motion.div initial="initial"
-      animate="in"
-      exit="out"
-      variants={pageVariants} className="contentContainer" className="contentContainer">
-
+    <div className="contentContainer">
+      {/* {console.log(props)} */}
       <Container>
         <div id="profileCard" className="uk-card uk-card-default uk-width-1-1@m" style={{ margin: "auto" }}>
           <div className="uk-card-header">
@@ -70,6 +66,8 @@ const Dashboard = props => {
             <p>Github username: </p>
             <hr></hr>
             <p>Email: {auth.email}</p>
+            <p>{auth.email}</p>
+            <p>Bio</p>
             <hr></hr>
             <p>Bio: </p>
             <hr></hr>
@@ -77,17 +75,16 @@ const Dashboard = props => {
           </div>
         </div>
         <div id="buttonContainer">
-          <Link to="/createteam"><motion.button whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }} className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Create Team</motion.button></Link>
-          <Link to="/searchteam"><motion.button whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }} className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Search Team</motion.button></Link>
+          <Link to="/createteam"><button className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Create Team</button></Link>
+          <Link to="/searchteam"><button className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Search Team</button></Link>
         </div>
       </Container>
     </motion.div>
   );
 
-}
 function get_user_data({ auth }) {
   return { auth }
 }
-export default connect(get_user_data, actions)(Dashboard);
+
+export default connect(get_user_data, actions)(Dashboard); 
+
