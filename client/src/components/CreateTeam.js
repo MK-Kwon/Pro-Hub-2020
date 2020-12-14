@@ -9,10 +9,8 @@ import { usePosition } from 'use-position';
 import API from "../utils/API";
 
 
-const CreateProject = props => {
-
+const CreateTeam = props => {
   const user = props.auth || {};
-
   const pageVariants = {
     initial: {
       opacity: 0,
@@ -57,7 +55,7 @@ const CreateProject = props => {
           <h1 className="pageTitle">Create your Project!</h1>
           <hr></hr>
           <div id="team_form_d">
-            <input type="text" placeholder="Enter Project Name" onBlur={(e) => e.target.placeholder = "Enter Project Name"} onFocus={(e) => e.target.placeholder = ""}></input>
+            <input tyoe="text" placeholder="Enter Project Name" onBlur={(e) => e.target.placeholder = "Enter Project Name"} onFocus={(e) => e.target.placeholder = ""}></input>
             <input type="text" placeholder="Enter Team Name" onBlur={(e) => e.target.placeholder = "Enter Team Name"} onFocus={(e) => e.target.placeholder = ""}></input>
             <p>Team Lead: {user.first_name} {user.last_name}</p>
             <textarea className="description_t" type="input" placeholder="Write a short description about your project" onBlur={(e) => e.target.placeholder = "Write a short description about your project"} onFocus={(e) => e.target.placeholder = ""}></textarea>
@@ -77,15 +75,16 @@ const CreateProject = props => {
           <Link to="/searchusers"> <motion.button whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }} className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Submit Project</motion.button></Link>
         </div>
+
       </Container>
     </motion.div>
   );
+
 }
 
 // export default CreateTeam;
 function get_user_data({ auth }) {
   return { auth }
-  return { auth }
 }
 
-export default connect(get_user_data, actions)(CreateProject); 
+export default connect(get_user_data, actions)(CreateTeam);
