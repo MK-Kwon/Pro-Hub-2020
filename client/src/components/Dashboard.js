@@ -7,7 +7,7 @@ import * as actions from '../actions';
 
 
 const Dashboard = props => {
-
+  
   const user = props.auth || {};
 
    return (
@@ -30,6 +30,8 @@ const Dashboard = props => {
             <p>Github username: </p>
             <hr></hr>
             <p>Email: {user.email}</p>
+            <p>{auth.email}</p>
+            <p>Bio</p>
             <hr></hr>
             <p>Bio: </p>
             <hr></hr>
@@ -47,4 +49,6 @@ const Dashboard = props => {
 function get_user_data({ auth }) {
   return { auth }
 }
-export default connect(get_user_data, actions)(Dashboard);
+
+export default connect(get_user_data, actions)(Dashboard); 
+
