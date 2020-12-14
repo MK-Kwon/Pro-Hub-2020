@@ -32,8 +32,11 @@ const Dashboard = props => {
             <p>Email: {user.email}</p>
             <hr></hr>
             <p>Bio: </p>
-            <hr></hr>
-            <p>Skills: </p>
+            <textarea className="description_t" type="text" placeholder="Describe yourself here " onBlur={(e) => e.target.placeholder = "Describe yourself here "} onFocus={(e) => e.target.placeholder = ""}></textarea>
+            <p>Skills: </p><textarea className="description_t" type="text" placeholder="Enter skills here " onBlur={(e) => e.target.placeholder = "Enter skills here "} onFocus={(e) => e.target.placeholder = ""}></textarea>
+
+            {/* Button to update profile skills and description. */}
+            <button className="uk-button uk-button-secondary buttons">Update Profile</button>
           </div>
         </div>
         <div id="buttonContainer">
