@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 import Container from '@material-ui/core/Container'
 import { Link } from "react-router-dom"
@@ -30,14 +30,25 @@ const CreateTeam = props => {
       scale: 1.2
     }
   };
-  const { latitude, longitude, error } = usePosition(true);
+
+  // const { cityState, useCityState } = useState("Enter Home City");
+  const { latitude, longitude, error } = usePosition();
   console.log(latitude)
   console.log(longitude)
 
   const get_location = () => {
 
     API.getLocation(latitude, longitude)
-      .then(res => console.log(res))
+      .then(res => {
+        console.log(res.data)
+        const city = `${res.data.address.city}, ${res.data.address.state}`
+        var city_i_e = document.getElementById("city_i").value = city
+        // city_i_e.setAttribute("placeholder", city)
+        // city_i_e.textContent = city
+
+        // return city
+
+      })
       .catch(err => console.log(err));
   };
 
@@ -68,7 +79,9 @@ const CreateTeam = props => {
             <input tyoe="text" placeholder="Tags" onBlur={(e) => e.target.placeholder = "Tags"} onFocus={(e) => e.target.placeholder = ""}></input>
             <div id="location_div">
               <input id="city_i" tyoe="text" placeholder="Enter Home City" onBlur={(e) => e.target.placeholder = "Enter Home City"} onFocus={(e) => e.target.placeholder = ""}></input>
-              <button id="add_current_location_b" onClick={get_location} className="uk-button uk-button-secondary uk-button-large uk-flex-left buttons">Use Current Location</button>
+              <button id="add_current_location_b" whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={get_location} className="uk-button uk-button-secondary uk-button-large uk-flex-left buttons">Use Current Location</button>
             </div>
             {/* <input tyoe="number" step="3" placeholder="Tags" onBlur={(e) => e.target.placeholder = "Tags"} onFocus={(e) => e.target.placeholder = ""}></input> */}
             <input id="spinbox_i" type="number" min="2" max="20" required placeholder="Number of Teammates" onBlur={(e) => e.target.placeholder = "Number of Teammates"} onFocus={(e) => e.target.placeholder = ""}></input>
@@ -87,7 +100,7 @@ const CreateTeam = props => {
 
 // export default CreateTeam;
 function get_user_data({ auth }) {
-    return { auth }
+  return { auth }
   return { auth }
 }
 
