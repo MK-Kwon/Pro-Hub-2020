@@ -110,7 +110,7 @@ input {
   
 #add_current_location_b {
     /* padding: 10px; */
-    width: 25%;
+    width: 23%;
     display: flex;
     justify-content: flex-start;
     margin: 5px 0px;
@@ -128,4 +128,15 @@ input[type=number]:hover::-webkit-inner-spin-button {
     width: 14px;
     height: 40px;
   }
+
+#location_div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+  
+#city_i {
+    width: 77%;
+    margin-right: 20px;
+}
 
