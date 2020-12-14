@@ -4,6 +4,7 @@
     margin: 0;
     border-radius: 5px;
 }
+
 body{
     background-image: url("./images/clement-falize-9uNFBOXBEBc-unsplash_optimized.jpg");
     background-color: #4377ca;
@@ -14,38 +15,48 @@ body{
     margin: 0;
     padding: 0;
 }
+
 #hero {
     margin-top: 10px;
     background-color: rgba(33, 33, 33, 0.664);
     text-align: center;
     color: white;
-    text-shadow: 1px 2px rgba(33,33,33, 0.5);
+    text-shadow: 1px 2px rgba(33,33,33, 0.664);
 }
+
 h1, h5{
     color: white;
     font-weight: 300 !important;
 }
+
 a:hover{
     text-decoration: none;
     color: #4377ca;
 }
-.contentContainer {
+
+.contentContainer  {
     margin-top: 15px;
 }
+
 #profileName{
     color: white;
 }
+
 #profileCard {
     background-color: rgba(33,33,33, 0.5);
     color: white;
     min-height: 500px;
 }
+
 .nav-wrapper {
     background-color: #424e7c;
 }
 
 .buttons {
     background-color: #252525da !important;
+} 
+
+.buttons {
     display: block !important;
     margin: 10px auto 10px auto !important;
     border-radius: 5px !important;
@@ -140,6 +151,7 @@ input[type=number]:hover::-webkit-inner-spin-button {
     margin-right: 20px;
 }
 
+
 #spinbox_i[type="number"].mod::-webkit-outer-spin-button, #spinbox_i[type="number"].mod::-webkit-inner-spin-button {
     -webkit-appearance: none;
     background: #0F0 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAKUlEQVQYlWNgwAT/sYhhKPiPT+F/LJgEsHv37v+EMGkmkuImoh2NoQAANlcun/q4OoYAAAAASUVORK5CYII=) no-repeat center center;
@@ -157,3 +169,4 @@ input[type=number]:hover::-webkit-inner-spin-button {
     box-shadow: 0 0 2px #0CF;
     opacity: .7;
 }
+
