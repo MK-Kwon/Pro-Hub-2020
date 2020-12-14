@@ -33,7 +33,7 @@ const SearchUsers = props => {
             <Container>
 
                 <h1 className="pageTitle">Find Team-Mates</h1>
-                {/* <div className="finderContainer"> */}
+                
                 {/* UIKit's slideshow to cycle through the user database. */}
                 <div className="uk-visible-toggle uk-light finderContainer" tabindex="-1" uk-slideshow="animation: pull">
 
@@ -56,7 +56,6 @@ const SearchUsers = props => {
                     <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
 
                 </div>
-                {/* </div> */}
                 <div>
 
                     <p style={{ margin: "auto" }}>
