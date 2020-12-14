@@ -49,7 +49,7 @@ a:hover{
 }
 
 .nav-wrapper {
-    background-color: #ff9292bb;
+    background-color: #424e7c;
 }
 
 .buttons {
@@ -89,7 +89,7 @@ input {
     color: #e5e5e5;
 }
   
-#description_t {
+.description_t {
     border: 1px solid #9e9e9e;
     resize: none;
     height: 100px;
@@ -99,7 +99,7 @@ input {
     font-size: 16px;
 }
   
-#description_t:focus {
+.description_t:focus {
     outline: 0;
     border: 2px #26a69a solid
 }

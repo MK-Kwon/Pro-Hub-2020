@@ -77,8 +77,8 @@ const CreateTeam = props => {
             <input type="text" placeholder="Enter Team Name" onBlur={(e) => e.target.placeholder = "Enter Team Name"} onFocus={(e) => e.target.placeholder = ""}></input>
             {/* <input onfocus="this.placeholder = ''" onblur="this.placeholder='Address, Neighborhood, City, County'" type="text" name="" id="search_i" placeholder="Address, Neighborhood, City, County"></input> */}
             <p>Team Lead: {user.first_name} {user.last_name}</p>
-            <textarea id="description_t" tyoe="input" placeholder="Write a short description about your project" onBlur={(e) => e.target.placeholder = "Write a short description about your project"} onFocus={(e) => e.target.placeholder = ""}></textarea>
-            <input tyoe="text" placeholder="Tags" onBlur={(e) => e.target.placeholder = "Tags"} onFocus={(e) => e.target.placeholder = ""}></input>
+            <textarea className="description_t" type="input" placeholder="Write a short description about your project" onBlur={(e) => e.target.placeholder = "Write a short description about your project"} onFocus={(e) => e.target.placeholder = ""}></textarea>
+            <input type="text" placeholder="Tags" onBlur={(e) => e.target.placeholder = "Tags"} onFocus={(e) => e.target.placeholder = ""}></input>
             <div id="location_div">
               <input id="city_i" tyoe="text" placeholder="Enter Home City" onBlur={(e) => e.target.placeholder = "Enter Home City"} onFocus={(e) => e.target.placeholder = ""}></input>
               <button id="add_current_location_b" whileHover={{ scale: 1.1 }}
