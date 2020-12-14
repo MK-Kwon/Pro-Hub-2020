@@ -63,20 +63,20 @@ const userSeed = [
 ]
 
 
-const teamSeed = [
+const projectSeed = [ 
   {
     name: "Dreamteam",
     numMembers: 3,
-    teamDesc: "the dream team",
-    teamLoc: "Australia",
+    projectDesc: "the dream team",
+    projectLoc: "Australia",
     image: "img1",
     users: []
   },
   {
     name: "MyTeam",
     numMembers: 4,
-    teamDesc: "my team",
-    teamLoc: "Australia",
+    projectDesc: "my team",
+    projectLoc: "Australia",
     image: "img2",
     users: []
   }
@@ -94,9 +94,9 @@ db.User
     process.exit(1);
   });
 
-db.Team
+db.Project
   .remove({})
-  .then(() => db.Team.collection.insertMany(teamSeed))
+  .then(() => db.Project.collection.insertMany(projectSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);

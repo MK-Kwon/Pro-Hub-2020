@@ -2,11 +2,11 @@ import axios from "axios";
 
 export default {
   // Gets all books
-  getTeams: function () {
+  getProjects: function () {
     return axios.get("/api/teams");
   },
   // Gets the book with the given id
-  getTeam: function (id) {
+  getProject: function (id) {
     return axios.get("/api/teams/" + id);
   },
   // Gets all books

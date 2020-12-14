@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 
 //We need to make the join team button generate an updated table for the user and display it on user dash. User also needs to be added to the roster for the team on Mongoose DB
 
-const CreateTeam = props => {
+const CreateProject = props => {
 
     const pageVariants = {
         initial: {
@@ -69,4 +69,4 @@ const CreateTeam = props => {
         </div>
     );
 }
-export default CreateTeam;
+export default CreateProject;

@@ -31,8 +31,9 @@ const SearchUsers = props => {
             exit="out"
             variants={pageVariants} >
             <Container>
-               <h1 className="pageTitle">Find Team-Mates</h1>
-                {/* <div className="finderContainer"> */}
+
+                <h1 className="pageTitle">Find Team-Mates</h1>
+                
                 {/* UIKit's slideshow to cycle through the user database. */}
                 <div className="uk-visible-toggle uk-light finderContainer" tabindex="-1" uk-slideshow="animation: pull">
 
@@ -56,6 +57,7 @@ const SearchUsers = props => {
 
                 </div>
                 <div>
+
                     <p style={{ margin: "auto" }}>
                         <Link to="/dashboard"><motion.button whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }} className="uk-button uk-button-secondary uk-button-large buttons" style={{ color: "white" }}>Back to Dashboard</motion.button></Link>
