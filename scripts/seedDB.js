@@ -13,6 +13,7 @@ const userSeed = [
     username: "user1",
     first_name: "Jessica",
     last_name: "Thomson",
+    first_name: "Jessica", 
     email: "j.thomson@user.com",
     photo: "img1",
     location: "NSW",
