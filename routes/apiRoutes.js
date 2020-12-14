@@ -6,16 +6,16 @@ const axios = require("axios");
 module.exports = function (app) {
 
   // Get Last Workout
-  app.get("/api/teams", async ({ body }, res) => {
+  app.get("/api/projects", async ({ body }, res) => {
     // Find all exercises in workout
-    const request = await db.Team.find({})
+    const request = await db.Project.find({})
     // Send the request back to the front end
     res.send(request)
   });
 
-  app.get("/api/teams/:id", async ({ body }, res) => {
+  app.get("/api/projects/:id", async ({ body }, res) => {
     // Find all workouts
-    const request = await db.Team.find({}).populate("workout")
+    const request = await db.Project.find({}).populate("workout")
     // Send the request back to the front end
     res.send(request)
   });
@@ -32,7 +32,7 @@ module.exports = function (app) {
 
   app.post("/api/user", async ({ body }, res) => {
     // Create an empty workout object ready for exercises to get put into it
-    const request = await db.Team.create(body)
+    const request = await db.User.create(body)
     // Send the request back to the front end
     res.send(request)
   });

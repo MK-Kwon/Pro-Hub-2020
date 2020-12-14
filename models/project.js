@@ -1,17 +1,17 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
-const teamSchema = new Schema({
+const projectSchema = new Schema({
     _id: {
         type: String,
         unique: true
     },
     numMembers: Number,
-    teamDesc: String,
-    teamLoc: String,
+    projectDesc: String,
+    projectLoc: String,
     image: String
 });
 
-const Team = mongoose.model('Team', teamSchema);
+const Project = mongoose.model('Project', projectSchema);
 
-module.exports = Team; 
+module.exports = Project;  

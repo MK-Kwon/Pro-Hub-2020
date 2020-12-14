@@ -9,7 +9,7 @@ import { usePosition } from 'use-position';
 import API from "../utils/API";
 
 
-const CreateTeam = props => {
+const CreateProject = props => {
 
   const user = props.auth || {};
 
@@ -105,4 +105,4 @@ function get_user_data({ auth }) {
   return { auth }
 }
 
-export default connect(get_user_data, actions)(CreateTeam); 
+export default connect(get_user_data, actions)(CreateProject); 
