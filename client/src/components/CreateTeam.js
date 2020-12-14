@@ -66,7 +66,10 @@ const CreateTeam = props => {
             <p>Team Lead: {user.first_name} {user.last_name}</p>
             <textarea id="description_t" tyoe="input" placeholder="Write a short description about your project" onBlur={(e) => e.target.placeholder = "Write a short description about your project"} onFocus={(e) => e.target.placeholder = ""}></textarea>
             <input tyoe="text" placeholder="Tags" onBlur={(e) => e.target.placeholder = "Tags"} onFocus={(e) => e.target.placeholder = ""}></input>
-            <button id="add_current_location_b" onClick={get_location} class="uk-button uk-button-secondary uk-button-large uk-flex-left buttons">Use Current Location</button>
+            <div id="location_div">
+              <input id="city_i" tyoe="text" placeholder="Enter Home City" onBlur={(e) => e.target.placeholder = "Enter Home City"} onFocus={(e) => e.target.placeholder = ""}></input>
+              <button id="add_current_location_b" onClick={get_location} className="uk-button uk-button-secondary uk-button-large uk-flex-left buttons">Use Current Location</button>
+            </div>
             {/* <input tyoe="number" step="3" placeholder="Tags" onBlur={(e) => e.target.placeholder = "Tags"} onFocus={(e) => e.target.placeholder = ""}></input> */}
             <input id="spinbox_i" type="number" min="2" max="20" required placeholder="Number of Teammates" onBlur={(e) => e.target.placeholder = "Number of Teammates"} onFocus={(e) => e.target.placeholder = ""}></input>
           </div>
