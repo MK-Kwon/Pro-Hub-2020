@@ -55,7 +55,6 @@ const SearchUsers = props => {
                     <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
 
                 </div>
-                {/* </div> */}
                 <div>
                     <p style={{ margin: "auto" }}>
                         <Link to="/dashboard"><motion.button whileHover={{ scale: 1.1 }}
