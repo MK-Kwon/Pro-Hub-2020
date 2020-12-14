@@ -140,3 +140,22 @@ input[type=number]:hover::-webkit-inner-spin-button {
     margin-right: 20px;
 }
 
+
+#spinbox_i[type="number"].mod::-webkit-outer-spin-button, #spinbox_i[type="number"].mod::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    background: #0F0 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAKUlEQVQYlWNgwAT/sYhhKPiPT+F/LJgEsHv37v+EMGkmkuImoh2NoQAANlcun/q4OoYAAAAASUVORK5CYII=) no-repeat center center;
+    width: 3em;
+    border-left: 1px solid #0f0;
+    opacity: 0;
+    /* shows Spin Buttons per default (Chrome >= 39) */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+#spinbox_i[type="number"].mod::-webkit-inner-spin-button:hover, #spinbox_i[type="number"].mod::-webkit-inner-spin-button:active {
+    box-shadow: 0 0 2px #0CF;
+    opacity: .7;
+}
+

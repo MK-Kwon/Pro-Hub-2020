@@ -69,11 +69,12 @@ const CreateTeam = props => {
       variants={pageVariants} className="contentContainer">
       <Container>
         <div id="createTeamContainer">
-          <h1 className="pageTitle">Create your Team!</h1>
+          <h1 className="pageTitle">Create your Project!</h1>
           <hr></hr>
           {/* Needs to be a form */}
           <div id="team_form_d">
-            <input tyoe="text" placeholder="Enter Team Name" onBlur={(e) => e.target.placeholder = "Enter Team Name"} onFocus={(e) => e.target.placeholder = ""}></input>
+            <input type="text" placeholder="Enter Project Name" onBlur={(e) => e.target.placeholder = "Enter Project Name"} onFocus={(e) => e.target.placeholder = ""}></input>
+            <input type="text" placeholder="Enter Team Name" onBlur={(e) => e.target.placeholder = "Enter Team Name"} onFocus={(e) => e.target.placeholder = ""}></input>
             {/* <input onfocus="this.placeholder = ''" onblur="this.placeholder='Address, Neighborhood, City, County'" type="text" name="" id="search_i" placeholder="Address, Neighborhood, City, County"></input> */}
             <p>Team Lead: {user.first_name} {user.last_name}</p>
             <textarea id="description_t" tyoe="input" placeholder="Write a short description about your project" onBlur={(e) => e.target.placeholder = "Write a short description about your project"} onFocus={(e) => e.target.placeholder = ""}></textarea>
@@ -92,7 +93,7 @@ const CreateTeam = props => {
           <Link to="/dashboard"><motion.button whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }} className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Back to Dashboard</motion.button></Link>
           <Link to="/searchusers"> <motion.button whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }} className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Submit Team</motion.button></Link>
+            whileTap={{ scale: 0.9 }} className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Submit Project</motion.button></Link>
         </div>
       </Container>
     </motion.div>
