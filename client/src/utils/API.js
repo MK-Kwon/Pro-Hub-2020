@@ -17,8 +17,8 @@ export default {
   getUser: function (id) {
     return axios.get("/api/user/" + id);
   },
-  getLocation: function (id) {
-    return axios.get("/api/location/:lat_lon");
+  getLocation: function (lat, lon) {
+    return axios.get(`/api/location/${lat}+${lon}`);
   }
   // // Deletes the book with the given id
   // deleteBook: function (id) {

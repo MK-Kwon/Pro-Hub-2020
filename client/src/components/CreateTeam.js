@@ -6,9 +6,13 @@ import { motion } from "framer-motion"
 import { connect } from 'react-redux'
 import * as actions from '../actions'
 import { usePosition } from 'use-position';
+import API from "../utils/API";
 
 
 const CreateTeam = props => {
+
+  const user = props.auth || {};
+
   const pageVariants = {
     initial: {
       opacity: 0,
@@ -27,9 +31,25 @@ const CreateTeam = props => {
     }
   };
   const { latitude, longitude, error } = usePosition(true);
-  const user = props.auth || {};
+  console.log(latitude)
+  console.log(longitude)
 
-  console.log(latitude, longitude, error)
+  const get_location = () => {
+
+    API.getLocation(latitude, longitude)
+      .then(res => console.log(res))
+      .catch(err => console.log(err));
+  };
+
+  // Deletes a book from the database with a given id, then reloads books from the db
+  // function deleteBook(id) {
+  //   API.deleteBook(id)
+  //     .then(res => loadBooks())
+  //     .catch(err => console.log(err));
+  // }
+
+
+  //console.log(latitude, longitude, error)
   return (
     <motion.div initial="initial"
       animate="in"
@@ -46,7 +66,7 @@ const CreateTeam = props => {
             <p>Team Lead: {user.first_name} {user.last_name}</p>
             <textarea id="description_t" tyoe="input" placeholder="Write a short description about your project" onBlur={(e) => e.target.placeholder = "Write a short description about your project"} onFocus={(e) => e.target.placeholder = ""}></textarea>
             <input tyoe="text" placeholder="Tags" onBlur={(e) => e.target.placeholder = "Tags"} onFocus={(e) => e.target.placeholder = ""}></input>
-            <button id="add_current_location_b" class="uk-button uk-button-secondary uk-button-large uk-flex-left buttons">Use Current Location</button>
+            <button id="add_current_location_b" onClick={get_location} class="uk-button uk-button-secondary uk-button-large uk-flex-left buttons">Use Current Location</button>
             {/* <input tyoe="number" step="3" placeholder="Tags" onBlur={(e) => e.target.placeholder = "Tags"} onFocus={(e) => e.target.placeholder = ""}></input> */}
             <input id="spinbox_i" type="number" min="2" max="20" required placeholder="Number of Teammates" onBlur={(e) => e.target.placeholder = "Number of Teammates"} onFocus={(e) => e.target.placeholder = ""}></input>
           </div>
