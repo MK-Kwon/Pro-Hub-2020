@@ -11,6 +11,7 @@ import API from "../utils/API";
 
 const CreateTeam = props => {
 
+
   const user = props.auth || {};
 
   const pageVariants = {
