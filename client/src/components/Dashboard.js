@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 import Container from '@material-ui/core/Container'
 import { Link } from "react-router-dom"
@@ -7,10 +7,10 @@ import * as actions from '../actions'
 import { motion } from "framer-motion"
 import API from "../utils/API";
 
-
 const Dashboard = props => {
   // var link_github_b_e = document.getElementById("link_github_b")
   var link_github_b_e = document.querySelector("#link_github_b")
+  const [username, setUsername] = useState("");
 
   const pageVariants = {
     initial: {
@@ -32,17 +32,22 @@ const Dashboard = props => {
 
   const user = props.auth || {};
 
-  const get_github = () => {
+  const get_github = (username) => {
     // console.log("hello")
-    if (link_github_b_e === null) {
-      console.log(link_github_b_e.value)
-    }
-    // API.getGithub(username)
-    //   .then(res => {
-    //     console.log(res.data)
-    //     const github = res.data
-    //   })
-    //   .catch(err => console.log(err));
+    // if (link_github_b_e !== null) {
+    //   console.log(link_github_b_e)
+    // }
+    // const username = "livingkurt"
+    API.getGithub(username)
+      .then(res => {
+        console.log(res.data)
+        const github = res.data
+      })
+      .catch(err => console.log(err));
+  };
+  const handleGithubClick = event => {
+    event.preventDefault();
+    get_github(username);
   };
 
 
@@ -68,28 +73,40 @@ const Dashboard = props => {
             {/* <p>Github: </p> */}
             <div id="location_div">
               <input
-
                 id="city_i"
                 tyoe="text"
                 placeholder="Enter Github Username"
                 onBlur={(e) => e.target.placeholder = "Enter Github Username"}
-                onFocus={(e) => e.target.placeholder = ""}>
-
+                onChange={(e) => setUsername(e.target.value)}>
+                onFocus={(e) => e.target.placeholder = ""}
+                onChange={(e) => setUsername(e.target.value)}
               </input>
               <button
                 id="link_github_b"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                onClick={() => get_github()}
+                onClick={handleGithubClick}
                 className="uk-button uk-button-secondary uk-button-large uk-flex-left buttons">Link your Github Account</button>
             </div>
             <hr></hr>
             <p>Email: {user.email}</p>
             <hr></hr>
             <p>Bio: </p>
-            <textarea className="description_t" type="text" placeholder="Describe yourself here " onBlur={(e) => e.target.placeholder = "Describe yourself here "} onFocus={(e) => e.target.placeholder = ""}></textarea>
-            <p>Skills: </p><textarea className="description_t" type="text" placeholder="Enter skills here " onBlur={(e) => e.target.placeholder = "Enter skills here "} onFocus={(e) => e.target.placeholder = ""}></textarea>
-            {/* Button to update profile skills and description. */}
+            <textarea
+              className="description_t"
+              type="text"
+              placeholder="Describe yourself here " o
+              nBlur={(e) => e.target.placeholder = "Describe yourself here "}
+              onFocus={(e) => e.target.placeholder = ""}>
+            </textarea>
+            <p>Skills: </p>
+            <textarea
+              className="description_t"
+              type="text"
+              placeholder="Enter skills here "
+              onBlur={(e) => e.target.placeholder = "Enter skills here "}
+              onFocus={(e) => e.target.placeholder = ""}>
+            </textarea>
             <button className="uk-button uk-button-secondary buttons">Update Profile</button>
           </div>
         </div>

@@ -10,9 +10,6 @@ module.exports = function (app) {
     // Send the request back to the front end
     res.send(request)
   });
-
-  
-
   app.get("/api/projects/:id", async ({ body }, res) => {
     // Find all workouts
     const request = await db.Project.find({}).populate("users")
@@ -28,8 +25,6 @@ module.exports = function (app) {
     // Send the request back to the front end
     res.send(request)
   });
-
-
   app.post("/api/user", async ({ body }, res) => {
     // Create an empty workout object ready for exercises to get put into it
     const request = await db.User.create(body)
@@ -54,17 +49,17 @@ module.exports = function (app) {
         })
     }
     get_city_from_coord(lat, lon)
-
   });
   app.get("/api/github/:username", async (req, res) => {
     const username = req.params.username
+    console.log(username)
     const query_url = "https://api.github.com/users/" + username;
     // Make a request to the github api
+    // // Make a request to the github api
     axios.get(query_url).then(function (response) {
       const info = response.data
       res.json(info)
       // console.log(response)
     });
   });
-
 };
