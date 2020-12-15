@@ -7,7 +7,7 @@ import * as actions from '../actions';
 
 
 const Dashboard = props => {
-
+  
   const user = props.auth || {};
 
    return (
@@ -30,15 +30,20 @@ const Dashboard = props => {
             <p>Github username: </p>
             <hr></hr>
             <p>Email: {user.email}</p>
+            <p>{auth.email}</p>
+            <p>Bio</p>
             <hr></hr>
             <p>Bio: </p>
-            <hr></hr>
-            <p>Skills: </p>
+            <textarea className="description_t" type="text" placeholder="Describe yourself here " onBlur={(e) => e.target.placeholder = "Describe yourself here "} onFocus={(e) => e.target.placeholder = ""}></textarea>
+            <p>Skills: </p><textarea className="description_t" type="text" placeholder="Enter skills here " onBlur={(e) => e.target.placeholder = "Enter skills here "} onFocus={(e) => e.target.placeholder = ""}></textarea>
+
+            {/* Button to update profile skills and description. */}
+            <button className="uk-button uk-button-secondary buttons">Update Profile</button>
           </div>
         </div>
         <div id="buttonContainer">
-          <Link to="/createteam"><button className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Create Team</button></Link>
-          <Link to="/searchteam"><button className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Search Team</button></Link>
+          <Link to="/createproject"><button className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Create Team</button></Link>
+          <Link to="/searchproject"><button className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Search Team</button></Link>
         </div>
       </Container>
     </div>
@@ -47,4 +52,6 @@ const Dashboard = props => {
 function get_user_data({ auth }) {
   return { auth }
 }
-export default connect(get_user_data, actions)(Dashboard);
+
+export default connect(get_user_data, actions)(Dashboard); 
+
