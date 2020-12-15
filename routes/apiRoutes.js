@@ -3,7 +3,6 @@ const axios = require("axios");
 // const axios = require("axios")
 // Export API Routes to Express
 module.exports = function (app) {
-
   // Get Projects
   app.get("/api/projects", async ({ body }, res) => {
     // Find all exercises in workout
@@ -12,35 +11,32 @@ module.exports = function (app) {
     res.send(request)
   });
 
+  
+
   app.get("/api/projects/:id", async ({ body }, res) => {
     // Find all workouts
-
     const request = await db.Project.find({}).populate("users")
     // Send the request back to the front end
     res.send(request)
   });
-
   app.put("/api/projects/:id", async (req, res) => {
     // Find the project that was created and update it with a user
     const request = await db.User.findOneAndUpdate({ _id: req.params.id }, {
-    
       // Append the User to the Project object
       $push: { User: req.body }
     })
     // Send the request back to the front end
     res.send(request)
   });
+
+
   app.post("/api/user", async ({ body }, res) => {
     // Create an empty workout object ready for exercises to get put into it
     const request = await db.User.create(body)
     // Send the request back to the front end
     res.send(request)
   });
-
   app.get("/api/location/:lat_long", async (req, res) => {
-    // Find all workouts
-    // const request = await Workout.find({}).populate("workout")
-    // console.log(req.params.lat_long)
     const coordinates = req.params.lat_long.split("+")
     const lat = coordinates[0] || "30.2672"
     const lon = coordinates[1] || "97.7431"
@@ -56,24 +52,19 @@ module.exports = function (app) {
           return res.json(body_data);
           console.log(body_data)
         })
-        .catch(error => console.log(error));
-      // try {
-      //   const res = await axios.get(queryURL)
-      //   console.log(res.data)
-      //   // let city = res.address.city;
-      //   // return await res.json();
-      //   // console.log(json)
-      // }
-      // catch{
-      //   console.log(Error)
-      // }
-      // .then(function (response) {
-      // var city = response.address.city
-      // print(city) +
-      // get_todays_weather(city)
-      // res.send(city)
     }
     get_city_from_coord(lat, lon)
-    // Send the request back to the front end
+
   });
+  app.get("/api/github/:username", async (req, res) => {
+    const username = req.params.username
+    const query_url = "https://api.github.com/users/" + username;
+    // Make a request to the github api
+    axios.get(query_url).then(function (response) {
+      const info = response.data
+      res.json(info)
+      // console.log(response)
+    });
+  });
+
 };

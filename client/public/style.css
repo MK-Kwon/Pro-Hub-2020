@@ -99,7 +99,7 @@ input {
   
 #add_current_location_b {
     /* padding: 10px; */
-    width: 25%;
+    width: 300px;
     display: flex;
     justify-content: flex-start;
     margin: 5px 0px;
@@ -116,4 +116,11 @@ input[type=number] {
 input[type=number]:hover::-webkit-inner-spin-button {
     width: 14px;
     height: 40px;
-  }
+}
+
+#link_github_b {
+    width: 350px;
+    display: flex;
+    justify-content: flex-start;
+    margin: 5px 0px;
+} 
