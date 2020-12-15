@@ -1,14 +1,19 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const cookieSession = require('cookie-session')
+const cookieSession = require('cookie-session');
 const passport = require('passport');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
 const keys = require('./config/keys');
+const PORT = process.env.PORT || 5000;
 
-require('./models');
+require('./models/user');
 require('./services/passport');
 
-mongoose.connect(keys.mongoURI || "mongodb://localhost/prohub");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/pro-hub-2020", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true
+});
 
 const app = express();
 
@@ -25,14 +30,21 @@ app.use(passport.session());
 
 require('./routes/authRoutes.js')(app);
 require('./routes/billingRoutes.js')(app);
+require('./routes/apiRoutes.js')(app);
 
+// Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('client/build'))
-  const path = require('path')
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-  });
+  app.use(express.static('client/build'));
 }
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {console.log("STARTED");});
+// Send every request to the React app
+// Define any API routes before this runs
+app.get("*", function (req, res) {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
+
+app.listen(PORT, function () {
+  console.log(`🌎 ==> API server now on port ${PORT}!`);
+});
+
+
