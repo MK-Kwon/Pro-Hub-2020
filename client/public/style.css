@@ -1,126 +1,172 @@
 @import url('https://fonts.googleapis.com/css?family=Spartan&display=swap');
 * {
-    font-family: 'Spartan';
-    margin: 0;
-    border-radius: 5px;
+  font-family: 'Spartan';
+  margin: 0;
+  border-radius: 5px;
 }
-body{
-    background-image: url("./images/clement-falize-9uNFBOXBEBc-unsplash_optimized.jpg");
-    background-color: #4377ca;
-    border-radius: 0px;
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
+body {
+  background-image: url("./images/clement-falize-9uNFBOXBEBc-unsplash_optimized.jpg");
+  background-color: #4377ca;
+  border-radius: 0px;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 #hero {
-    margin-top: 10px;
-    background-color: rgba(33, 33, 33, 0.664);
-    text-align: center;
-    color: white;
-    text-shadow: 1px 2px rgba(33,33,33, 0.5);
+  margin-top: 10px;
+  background-color: rgba(33, 33, 33, 0.664);
+  text-align: center;
+  color: white;
+  text-shadow: 1px 2px rgba(33, 33, 33, 0.5);
 }
-h1, h5{
-    color: white;
-    font-weight: 300 !important;
+h1, h5 {
+  color: white;
+  font-weight: 300 !important;
 }
-a:hover{
-    text-decoration: none;
-    color: #4377ca;
+a:hover {
+  text-decoration: none;
+  color: #4377ca;
 }
 .contentContainer {
-    margin-top: 15px;
+  margin-top: 15px;
 }
-#profileName{
-    color: white;
+#profileName {
+  color: white;
 }
 #profileCard {
-    background-color: rgba(33,33,33, 0.5);
-    color: white;
-    min-height: 500px;
+  background-color: rgba(33, 33, 33, 0.5);
+  color: white;
+  min-height: 500px;
 }
 .nav-wrapper {
-    background-color: #ff9292bb;
+  background-color: #424e7c;
 }
-
 .buttons {
-    background-color: #252525da !important;
-    display: block !important;
-    margin: 10px auto 10px auto !important;
-    border-radius: 5px !important;
-    box-shadow: 1px 2px rgba(33,33,33, 0.5);
-    width: 100%;
+  background-color: #252525da !important;
+  display: block !important;
+  margin: 10px auto 10px auto;
+  border-radius: 5px !important;
+  box-shadow: 1px 2px rgba(33, 33, 33, 0.5);
+  width: 100%;
 }
-
-#createTeamContainer{
-    background-color: rgba(33,33,33, 0.5);
-    padding: 10px;
+#createTeamContainer {
+  background-color: rgba(33, 33, 33, 0.63);
+  padding: 10px;
 }
-#footer{
-    text-align: center;
-    line-height: 70px;
+#footer {
+  text-align: center;
+  line-height: 70px;
 }
-p{
-    color: #e5e5e5;
+p {
+  color: #e5e5e5;
 }
-
-.pageTitle{
-    text-align: center;
+h4 {
+  text-align: center;
+  font-weight: 200 !important;
 }
-
+.pageTitle {
+  text-align: center;
+}
 .finderContainer {
-    margin: 0 auto;
-    display: table;
+  margin: 0 auto;
 }
-
+.searchImage {
+  display: block;
+  margin: 0 auto;
+}
 input {
-    color: #e5e5e5;
+  color: #e5e5e5;
+  font-size: 16px;
 }
-  
-#description_t {
-    border: 1px solid #9e9e9e;
-    resize: none;
-    height: 100px;
-    color: #e5e5e5;
-    text-decoration: none;
-    padding: 10px;
-    font-size: 16px;
+.description_t {
+  border: 1px solid #9e9e9e;
+  resize: none;
+  height: 100px;
+  color: #e5e5e5;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 16px;
 }
-  
-#description_t:focus {
-    outline: 0;
-    border: 2px #26a69a solid
+.description_t:focus {
+  outline: 0;
+  border: 2px #26a69a solid;
+  font-size: 16px;
 }
-  
 #team_form_d {
-    padding: 10px;
+  padding: 10px;
 }
-  
 #add_current_location_b {
-    /* padding: 10px; */
-    width: 300px;
-    display: flex;
-    justify-content: flex-start;
-    margin: 5px 0px;
+  /* padding: 10px; */
+  width: 300px;
+  display: flex;
+  justify-content: flex-start;
+  margin: 5px 0px;
 }
-  
 #spinbox_i {
-    width: 15%;
+  width: 15%;
 }
-  
 input[type=number] {
-    height: 40px;
+  height: 40px;
+  font-size: 16px;
 }
-
 input[type=number]:hover::-webkit-inner-spin-button {
-    width: 14px;
-    height: 40px;
+  width: 14px;
+  height: 40px;
+}
+#location_div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+#city_i {
+  width: 77%;
+  margin-right: 20px;
 }
 
+#username_i {
+  margin-right: 20px;
+}
+
+#spinbox_i[type="number"].mod::-webkit-outer-spin-button, #spinbox_i[type="number"].mod::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  background: #0F0 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAKUlEQVQYlWNgwAT/sYhhKPiPT+F/LJgEsHv37v+EMGkmkuImoh2NoQAANlcun/q4OoYAAAAASUVORK5CYII=) no-repeat center center;
+  width: 3em;
+  border-left: 1px solid #0f0;
+  opacity: 0;
+  /* shows Spin Buttons per default (Chrome >= 39) */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+#spinbox_i[type="number"].mod::-webkit-inner-spin-button:hover, #spinbox_i[type="number"].mod::-webkit-inner-spin-button:active {
+  box-shadow: 0 0 2px #0CF;
+  opacity: .7;
+}
 #link_github_b {
-    width: 350px;
-    display: flex;
-    justify-content: flex-start;
-    margin: 5px 0px;
-} 
+  width: 350px;
+  display: flex;
+  justify-content: flex-start;
+  margin: 5px 0px;
+}
+
+#username_div {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+#username_lable_p {
+  margin: 0px;
+}
+
+#username_p {
+  margin-bottom: 0px !important;
+}
+
+img {
+  height: 100px;
+  width: 100px;
+}
