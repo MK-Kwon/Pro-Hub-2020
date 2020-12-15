@@ -10,7 +10,7 @@ export default {
     return axios.get("/api/projects/" + id);
   },
 
-  postProject : function () {
+  postProject: function () {
     return axios.post("/api/projects/");
   },
   // Gets all books
@@ -23,6 +23,9 @@ export default {
   },
   getLocation: function (lat, lon) {
     return axios.get(`/api/location/${lat}+${lon}`);
+  },
+  getGithub: function (username) {
+    return axios.get(`/api/github/${username}`);
   }
   // // Deletes the book with the given id
   // deleteBook: function (id) {
