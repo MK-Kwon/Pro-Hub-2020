@@ -3,11 +3,15 @@ import axios from "axios";
 export default {
   // Gets all books
   getProjects: function () {
-    return axios.get("/api/teams");
+    return axios.get("/api/projects");
   },
   // Gets the book with the given id
   getProject: function (id) {
-    return axios.get("/api/teams/" + id);
+    return axios.get("/api/projects/" + id);
+  },
+
+  postProject : function () {
+    return axios.post("/api/projects/");
   },
   // Gets all books
   getUsers: function () {
