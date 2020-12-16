@@ -7,19 +7,21 @@ const userSchema = new Schema({
     type: Number,
     default: 0
   },
-  //username: String,
-  name: String,
+  github_username: String,
   first_name: String,
   last_name: String,
   email: String,
-  image: String,
   photo: String,
+  github_photo: String,
   location: String,
-  skills: Array,
-  description: String,
-  //Team_id: String
+  skills: String,
+  bio: String,
+  followers: Number,
+  following: Number,
+  repos: Number,
+  github_url: String  
 });
 
 const User = mongoose.model('users', userSchema);
 
-module.exports = User; 
+module.exports = User;
