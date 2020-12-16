@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from "framer-motion"
 
 const Hero = () => {
+
   const pageVariants = {
     initial: {
       opacity: 0,
