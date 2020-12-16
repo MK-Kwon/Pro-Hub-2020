@@ -4,8 +4,8 @@ import { AnimatePresence } from "framer-motion"
 import { connect } from 'react-redux'
 import * as actions from '../actions'
 import Dashboard from './Dashboard'
-import CreateTeam from './CreateTeam'
-import SearchTeam from './SearchTeam'
+import CreateProject from './CreateProject'
+import SearchProject from './SearchProject'
 import SearchUsers from './SearchUsers'
 import Footer from './Footer'
 import Header from './Header'
@@ -31,15 +31,34 @@ class App extends Component {
                             <Route exact path="/" component={Landing} />
                             <Route exact path="/dashboard" value={this.props} component={Dashboard} />
                             <Route path="/surveys/new" component={SurveyNew} />
-                            <Route path="/createteam" component={CreateTeam} />
-                            <Route path="/searchteam" component={SearchTeam} />
+                            <Route path="/createproject" component={CreateProject} />
+                            <Route path="/searchproject" component={SearchProject} />
                             <Route path="/searchusers" component={SearchUsers} />
                             <Footer />
                         </div>
                     </BrowserRouter>
                 </AnimatePresence>
+                  <BrowserRouter>
+                    <div>
+                        <Header />
+                        <Route exact path="/" component={Landing} />
+                        <Route exact path="/dashboard" value={this.props} component={Dashboard} />
+                        <Route path="/surveys/new" component={SurveyNew} />
+                        <Route path="/createteam" component={CreateTeam} />
+                        <Route path="/searchteam" component={SearchTeam} />
+                        <Route path="/searchusers" component={SearchUsers} />
+                        <Footer />
+                    </div>
+                </BrowserRouter>
             </div>
         );
     };
 }
-export default connect(null, actions)(App); 
+
+function mapStateToProps({ auth }) {
+    // console.log()
+    return { auth }
+  }
+
+export default connect(mapStateToProps, actions)(App); 
+  
