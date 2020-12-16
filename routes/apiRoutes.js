@@ -188,4 +188,54 @@ module.exports = function (app) {
     }
   });
 
-}
+  //=====================================================================
+  //                  Location and Github
+  //=======================================================================
+
+  app.get("/api/location/:lat_long", async (req, res) => {
+    const coordinates = req.params.lat_long.split("+")
+    const lat = coordinates[0] || "30.2672"
+    const lon = coordinates[1] || "97.7431"
+    // console.log(lat)
+    // console.log(lon)
+    const get_city_from_coord = async (lat, lon) => {
+      // var search_city = search_city
+      var queryURL = "https://nominatim.openstreetmap.org/reverse?format=json&lat=" + lat + "&lon=" + lon
+      // print(queryURL)
+      try {
+        axios.post(queryURL)
+          .then(response => {
+            var body_data = response.data
+            console.log(body_data)
+            return res.json(body_data);
+
+          })
+      } catch (error) {
+        console.log({ "GET - User Location": error })
+        res.send(error)
+      }
+    }
+    get_city_from_coord(lat, lon)
+
+  });
+  
+  app.get("/api/github/:username", async (req, res) => {
+    const username = req.params.username
+    const query_url = "https://api.github.com/users/" + username;
+    // // Make a request to the github api
+
+    try {
+      axios.get(query_url).then(function (response) {
+        const info = response.data
+        res.json(info)
+        // console.log(response)
+      });
+    } catch (error) {
+      console.log({ "GET - Github Username": error })
+      res.send(error)
+    }
+  });
+
+};
+
+
