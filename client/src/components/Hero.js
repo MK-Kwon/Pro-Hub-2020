@@ -26,7 +26,7 @@ const Hero = () => {
       animate="in"
       exit="out"
       variants={pageVariants} className="uk-cover-container" id="hero">
-      <h1>Welcome to Co-Lab!</h1>
+      <h1>Welcome to Pro-Hub-2020!</h1>
 
       <div id="carousel" className="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="autoplay: true; animation: fade">
         <ul class="uk-slideshow-items">
@@ -44,7 +44,7 @@ const Hero = () => {
         <a className="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next">{"⇛"}</a>
       </div>
 
-      <h5>Find real-life team members for any project you can dream of. Co-Lab is here for those who prefer face-to-face interaction. Create an account and start searching for your perfect team-mates today.</h5>
+      <h5>Find real-life team members for any project you are planning of. Pro-Hub-2020 is here to assist those who look for like minded people. Create an account and start searching for your perfect team-mates today!</h5>
     </motion.div>
   )
 }
