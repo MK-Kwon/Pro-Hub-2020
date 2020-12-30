@@ -7,6 +7,8 @@ import { makeStyles } from '@material-ui/core/styles'
 // import Button from '@material-ui/core/Button'
 import { connect } from 'react-redux'
 import * as actions from '../../actions'
+import Card from '@material-ui/core/Card'
+import CardContent from '@material-ui/core/CardContent'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -109,87 +111,78 @@ const SearchUsers = (props) => {
       exit="out"
       variants={pageVariants} >
       <Container >
+        <div id="searchUserCard">
+          <h1 className="pageTitle-user-search">Find Team-Mates</h1>
+          <p className="search-user-instruction">Swipe left or right to browse potential teammates</p>
+          {/* UIKit's slideshow to cycle through the user database. */}
 
 
+          <div className="uk-width-auto">
 
-        <h1 className="pageTitle">Find Team-Mates</h1>
-        <h4>Swipe left or right to browse potential teammates</h4>
-        {/* UIKit's slideshow to cycle through the user database. */}
+            <div className="uk-visible-toggle uk-light finderContainer" tabIndex="-1" uk-slideshow="animation: pull">
+              <ul className="uk-slideshow-items">
+                {projectState.map(user => {
+                  return (
+                    <li
+                      value={user._id}
+                      onClick={() => handleAddUsers(user._id)}
+                    >
+                      {/* onChange={(e) => console.log(user._id)} > */}
 
-        <div style={{ backgroundColor: "rgba(33, 33, 33, 0.664)", maxHeight: "986px", marginBottom: "132px" }}>
-          <div className="uk-visible-toggle uk-light finderContainer" tabIndex="-1" uk-slideshow="animation: pull">
-            <ul className="uk-slideshow-items">
-              {projectState.map(user => {
-                return (
-                  <li
-                    value={user._id}
-                    onClick={() => handleAddUsers(user._id)}
-                  >
-                    {/* onChange={(e) => console.log(user._id)} > */}
-                    <h4>{user.first_name} {user.last_name}</h4>
-                    <p className="userInfo">{user.location}</p>
-                    <img className="searchImage" src={user.photo} alt="user profile" uk-cover></img>
-                    <br></br>
-                    <p className="userInfo">{user.bio}</p>
+                      <Card style={{ width: "90%", margin: "20px 30px 0 50px ", backgroundColor: "rgba(255, 255, 255, 0.95)", padding: "160px, 10px, 5px, 50px" }}>
 
-                  </li>
-                )
-              })}
-            </ul>
-          </div>
+                        <CardContent className="card-user-search">
+                          <div className="uk-width-expand">
+                            <p id="profileName-user-search" className="uk-card-title uk-margin-remove-bottom"><span style={{ fontStyle: "italic", fontWeight: "900" }}>{user.first_name} {user.last_name}</span></p>
+                            <p className="uk-text-meta uk-margin-remove-top">{user.location}</p>
+                          </div>
+                          <ul>
+                            <div>
+                              <p className="profile"><span style={{ color: "#863dfa", fontWeight: "900" }}>Email: </span> {user.email}</p>
+                              {user.github_username ? <p className="github-profile"><a className="github-profile-link" target="_blank" rel="noopener noreferrer" href={user.github_url} alt="Github Link"><span className="github-profile-link" style={{ color: "#863dfa", fontWeight: "900" }}>Github Profile</span></a>|| Followers: {user.followers} || Following: {user.following} || Repos: {user.repos}</p> : <> </>}
+                            </div>
+                            <div>
 
-          <h3 style={{ color: "white" }} className="pageTitle">Select Project</h3>
-          <a className="uk-position-center-left uk-position-small uk-hidden-hover" uk-slidenav-previous href="#" uk-slideshow-item="previous"></a>
-          <a className="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
-          {/* <div style={{ width: "100%", display: "flex", justifyContent: "center", flexDirection: "column" }}> */}
+                              <p className="profile"><span style={{ color: "#863dfa", fontWeight: "900" }}>Bio: </span>{user.bio}</p>
+                              <p className="profile"><span style={{ color: "#863dfa", fontWeight: "900" }}>Skills: </span>{user.skills}</p>
+                              <p className="profile"><span style={{ color: "#863dfa", fontWeight: "900" }}>City: </span>{user.location}</p>
 
-          <div style={{ color: "white", width: "100%", height: "200px", overflowX: "hidden", overflowX: "auto", textAlign: "justify" }}>
+                            </div>
+                          </ul>
+
+                        </CardContent>
 
 
-            {projects.map(project => {
-              return (
-                // <Link to="/Profile" id="projectButtonsDisplay">
-                <motion.button
-                  id={project._id}
-                  key={project._id}
-                  onClick={() => selectProject(project._id, logged_in_user._id)}
-                  value={project._id}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  className="uk-button uk-button-secondary uk-button-large buttons"
-                  aria-controls="simple-menu"
-                  aria-haspopup="true"
-                  style={{ color: "white", maxWidth: "503px" }}
-                >
-                  {project.project_name}
-                </motion.button>
-                // </Link>
-              )
-            })}
-          </div>
-          {/* </div> */}
-          <p style={{ margin: "auto" }}>
-            <Link to="/projectProfile">
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                className="uk-button uk-button-secondary uk-button-large buttons"
-                style={{ color: "white" }}>Back to Project</motion.button>
-            </Link>
-            <Link to="/emailuser">
-              <motion.button
-                id="menuButton"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                className="uk-button uk-button-secondary uk-button-large buttons"
-                aria-controls="simple-menu"
-                aria-haspopup="true"
-                style={{ color: "white" }}
-                onClick={handleAddUsers}
-              >
-                Ask them to join
+                      </Card>
+                      <Link to="/emailuser">
+                        <motion.button
+                          id="menuButton"
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 0.9 }}
+                          className="uk-button uk-button-large buttons-user-search"
+                          aria-controls="simple-menu"
+                          aria-haspopup="true"
+                          style={{ color: "white" }}
+                          onClick={handleAddUsers}
+                        >
+                          Ask them to join
             </motion.button></Link>
-          </p>
+
+
+                    </li>
+                  )
+                })}
+              </ul>
+
+
+
+
+
+
+
+
+            </div>
+          </div>
         </div>
       </Container>
     </motion.div >

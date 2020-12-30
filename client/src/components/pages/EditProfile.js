@@ -159,7 +159,7 @@ const EditProfile = props => {
       exit="out"
       variants={pageVariants} className="contentContainer">
       <Container>
-        <div id="profileCard" className="uk-card uk-card-default uk-width-1-1@m" style={{ margin: "auto" }}>
+        <div id="profileCard">
           <div className="uk-card-header">
             <div className="uk-grid-medium uk-flex-middle uk-grid">
               <div className="uk-width-auto">
@@ -187,8 +187,8 @@ const EditProfile = props => {
                   : (
                     <>
                       {/* <p id="username_lable_p">Github Username:</p> */}
-                      <p id="username_p" style={{ width: "70 % " }}>Github Username: {userState.github_username} </p>
-                      {userState.github_username ? <p style={{ margin: "10px 0px 0px 0px" }}><a target="_blank" rel="noopener noreferrer" href={userState.github_url} alt="Github Link">Github Profile</a> || Followers: {userState.followers} || Following: {userState.following} || Repos: {userState.repos}</p> : <> </>}
+                      <p id="username_p" style={{ width: "70 % " }}>Github Username: <span style={{ color: "#863dfa", fontWeight: "900" }}>{userState.github_username}</span> </p>
+                      {userState.github_username ? <p className="github_details" style={{ margin: "10px 0px 0px 0px" }}><a className="github_link" target="_blank" rel="noopener noreferrer" href={userState.github_url} alt="Github Link">Github Profile</a> || Followers: {userState.followers} || Following: {userState.following} || Repos: {userState.repos}</p> : <> </>}
                     </>
                   )
                 }
@@ -201,9 +201,9 @@ const EditProfile = props => {
                 className="uk-button uk-button-secondary uk-button-large uk-flex-left buttons">{(!linkGithubButton) ? "Link Github Account" : "Unlink Github Account"}</button>
             </div>
             <hr></hr>
-            <p>Email: {userState.email}</p>
+            <p className="github_details">Email: {userState.email}</p>
             <hr></hr>
-            <p>Bio:</p>
+            <p className="github_details">Bio:</p>
             <textarea
               className="description_t"
               type="text"
@@ -213,7 +213,7 @@ const EditProfile = props => {
               onBlur={(e) => e.target.placeholder = "Describe yourself here "}
               onFocus={(e) => e.target.placeholder = ""}>
             </textarea>
-            <p>Skills:</p>
+            <p className="github_details">Skills:</p>
             <textarea
               className="description_t"
               type="text"
@@ -225,7 +225,7 @@ const EditProfile = props => {
             </textarea>
             <div id="location_div">
               <br></br>
-              <p style={{ "padding-right": "10px" }}>City: </p>
+              <p className="github_details" style={{ "padding-right": "10px" }}>City: </p>
               <input
                 value={userState.location}
                 id="city_i"
@@ -236,22 +236,16 @@ const EditProfile = props => {
                 onFocus={(e) => e.target.placeholder = ""}>
               </input>
               <button
-                id="add_current_location_b"
+                id="add_current_location_b_2"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={get_location}
-                className="uk-button uk-button-secondary uk-button-large uk-flex-left buttons">Use Current Location</button>
+                >Use Current Location</button>
             </div>
 
             <Link to="/profile"><motion.button whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }} onClick={update_user_profile} className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Update Profile</motion.button></Link>
+              whileTap={{ scale: 0.9 }} onClick={update_user_profile} className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons buttons-edit" >Update Profile</motion.button></Link>
           </div>
-        </div>
-        <div id="buttonContainer">
-          <Link to="/createproject"><motion.button whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }} className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Create Team</motion.button></Link>
-          <Link to="/searchproject"><motion.button whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }} className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Search Team</motion.button></Link>
         </div>
       </Container>
     </motion.div >

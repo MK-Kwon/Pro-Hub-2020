@@ -75,30 +75,37 @@
      <motion.div initial="initial"
        animate="in"
        exit="out"
-       variants={pageVariants} className="contentContainer" className="contentContainer">
+       variants={pageVariants} className="contentContainer">
 
        <Container>
-        <form style={{ backgroundColor: "rgba(255,255,255,0.8)", padding: "15px" }} className="contact-form" onSubmit={sendEmail}>
-           <input className="zoom_f input_i" type="hidden" name="contact_number" />
-           <label>Name</label>
-          <input className="zoom_f input_i" type="text" name="user_name" placeholder="Name" />
-           <label>Email</label>
-           <input className="zoom_f input_i" type="email" name="user_email" placeholder="Email" />
-           <label>Message</label>
-           <textarea className="zoom_f input_i" name="message" placeholder="Enter Message Here" />
+       <div id="email">
+       <h3 className="pageTitle">Contact</h3>
+       <hr></hr>
+       <div id="team_form_d">
+        
+           
+           
+          <input className="enter_project_name" type="text" name="user_name" placeholder="Name" onBlur={(e) => e.target.placeholder = "Name"}
+              onFocus={(e) => e.target.placeholder = ""}
+              onChange={(e) => sendEmail(e)}></input>
+           
+           <input className="enter_project_name" type="text" name="user_email" placeholder="Email" onBlur={(e) => e.target.placeholder = "Email"}
+              onFocus={(e) => e.target.placeholder = ""}
+              onChange={(e) => sendEmail(e)}></input>
+           
+           <textarea className="description_t" name="message" placeholder="Enter Message Here" onBlur={(e) => e.target.placeholder = "Enter Message Here"}
+              onFocus={(e) => e.target.placeholder = ""}
+              onChange={(e) => sendEmail(e)}></textarea>
+           </div>
+           <div id="buttonContainer">
            <motion.button
-             id="button" type="submit" value="Send"
-             aria-describedby={id} variant="contained" onClick={handleClick}
-             whileHover={{ scale: 1.1 }}
-             whileTap={{ scale: 0.9 }} className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Send Message</motion.button>
-         </form>
-
-
-         <div id="buttonContainer">
-
-           <Link to="/searchusers"><motion.button whileHover={{ scale: 1.1 }}
-             whileTap={{ scale: 0.9 }} className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Go Back</motion.button></Link>
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons"
+                onClick={handleClick}>Send Message</motion.button>
          </div>
+        
+         
          <Popover
            id={id}
            open={open}
@@ -113,9 +120,9 @@
              horizontal: 'center',
            }}
         >
-           <Typography className={classes.typography}>Email Sent.</Typography>
+           <Typography className={classes.typography}>Email Sent</Typography>
         </Popover>
-         {/* <ChatWindow /> */}
+        </div>
       </Container>
     </motion.div >
    )
