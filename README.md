@@ -14,21 +14,21 @@
 
 > ProHub is an app that lets you find real-life team members for any project you plan on. As a developer it is not so easy to work on a team outside of a professional setting. With Pro-Hub-2020 it gives individuals the chance to meet up with local developers to collaborate on a project. Whether you're just building your portfolio, or needing an extra set of hands, ProHub will make your project come alive.
 
-<img src="http://drive.google.com/uc?id=1efVz2yTP2SBUSWkV5Cu1iwUX-JuXKuQo" width ="100%" height="auto">
+<img src="http://drive.google.com/uc?id=1efVz2yTP2SBUSWkV5Cu1iwUX-JuXKuQo" width ="90%" height="auto">
 
-<img src="http://drive.google.com/uc?id=12_bvteRa0lanASd4rOefuRlpJZT6obGO" width ="100%" height="auto">
+<img src="http://drive.google.com/uc?id=12_bvteRa0lanASd4rOefuRlpJZT6obGO" width ="90%" height="auto">
 
-<img src="http://drive.google.com/uc?id=1tABxkuBHw7f0A4MBimgIXB1iATVulPhZ" width ="100%" height="auto">
+<img src="http://drive.google.com/uc?id=1tABxkuBHw7f0A4MBimgIXB1iATVulPhZ" width ="90%" height="auto">
 
-<img src="http://drive.google.com/uc?id=17hg30X7S2MHQCh1Eg2N968OR1AT34Cx3" width ="100%" height="auto">
+<img src="http://drive.google.com/uc?id=17hg30X7S2MHQCh1Eg2N968OR1AT34Cx3" width ="90%" height="auto">
 
-<img src="http://drive.google.com/uc?id=1psweA-cCQBwWWXE4TuS4T2GBvGPllv59" width ="100%" height="auto">
+<img src="http://drive.google.com/uc?id=1psweA-cCQBwWWXE4TuS4T2GBvGPllv59" width ="90%" height="auto">
 
-<img src="http://drive.google.com/uc?id=1VY12aHP78HxNVN1TyxieVu_PdAEPivmm" width ="100%" height="auto">
+<img src="http://drive.google.com/uc?id=1VY12aHP78HxNVN1TyxieVu_PdAEPivmm" width ="90%" height="auto">
 
-<img src="https://thumbs.gfycat.com/InexperiencedHeftyGemsbuck-size_restricted.gif" width ="100%" height="auto">
+<img src="https://thumbs.gfycat.com/InexperiencedHeftyGemsbuck-size_restricted.gif" width ="90%" height="auto">
 
-<img src="https://thumbs.gfycat.com/ScalyReasonableFox-size_restricted.gif" width ="100%" height="auto">
+<img src="https://thumbs.gfycat.com/ScalyReasonableFox-size_restricted.gif" width ="90%" height="auto">
 
 
 ## Instructions
