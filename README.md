@@ -90,8 +90,8 @@ Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
-Copyright © 2020 [Min Kyung Kwon, Thomas Nguyen, Jessica Walker](https://github.com/MK-Kwon, https://github.com/T-Nguyen700, https://github.com/Jessica-Walker1020).<br />
-This project is [ISC](https://github.com/MK-Kwon/roadstar/blob/master/LICENSE) licensed.
+Copyright © 2020 [Min Kyung Kwon, James Lee](https://github.com/MK-Kwon, https://github.com/JLee3849023 <br />
+This project is [ISC](https://github.com/MK-Kwon/Pro-Hub-2020/blob/master/LICENSE) licensed.
 
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
