@@ -135,30 +135,28 @@ const ProjectProfile = props => {
       exit="out"
       variants={pageVariants} className="contentContainer">
       <Container>
+      <div id="profileCard">
         <div>
           {projects.map(project => {
             return (
-              <Card style={{ marginBottom: "10px", backgroundColor: "rgba(255, 255, 255, 0.78)" }} className={classes.root} id={project._id} key={project._id}>
+              <div className="myproject-card">
+               <Card  style={{ width: "90%", margin: "30px auto", backgroundColor: "rgba(255, 255, 255, 0.95)", padding: "160px, 10px, 5px, 50px" }} id={project._id} key={project._id}>
                 <CardContent>
-                  <Typography variant="h5" component="h2">
-                    {project.project_name}
-                  </Typography>
-                  <Typography className={classes.title} gutterBottom>
-                    {project.description}
-                  </Typography>
-
-                  <Typography className={classes.pos}>
-                    {project.tags}
-                  </Typography>
-                  <Typography variant="body2" component="p">
-                    {projectUsers.map(user => {
-                      let full_name = `${user.first_name} ${user.last_name} `;
-                      return full_name;
-                    })}
-                    <br />
-                  </Typography>
+                <ul>
+                      <li><p className="profile"><span style={{ color: "#863dfa", fontWeight: "900", fontSize: "1rem" }}>Name: </span>{project.project_name}</p></li>
+                      <li><p className="profile"><span style={{ color: "#863dfa", fontWeight: "900", fontSize: "1rem" }}>Description: </span>{project.description}</p></li>
+                      <li><p className="profile"><span style={{ color: "#863dfa", fontWeight: "900", fontSize: "1rem" }}>Tags: </span>{project.tags} </p></li>
+                      <li><p className="profile"><span style={{ color: "#863dfa", fontWeight: "900", fontSize: "1rem" }}>Team Members: </span>
+                        {projectUsers.map(user=> {
+                          let full_name = `${user.first_name}  ${user.last_name}, `;
+                          return full_name
+                          })}
+                        <br />
+                      </p></li>
+                      </ul>
                 </CardContent>
               </Card>
+              </div>
             )
           })}
         </div>
@@ -166,8 +164,7 @@ const ProjectProfile = props => {
         <div id="buttonContainer">
           <Link to="/createproject"><motion.button whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }} className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Create Project</motion.button></Link>
-          <Link to="/searchproject"><motion.button whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }} className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Search Project</motion.button></Link>
+        </div>
         </div>
       </Container>
     </motion.div>

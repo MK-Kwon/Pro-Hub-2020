@@ -3,7 +3,10 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import Menu from '@material-ui/core/Menu'
 import MenuItem from '@material-ui/core/MenuItem'
-
+import AppBar from '@material-ui/core/AppBar'
+import Toolbar from '@material-ui/core/Toolbar'
+import Logo from '../images/ProHubLogo.png'
+import IconButton from '@material-ui/core/IconButton'
 
 const Header = props => {
 
@@ -30,7 +33,7 @@ const Header = props => {
         return;
       case false:
         return (
-          <li><a href="/auth/google">Login With Google</a></li>)
+          <div><a href="/auth/google">Login With Google</a></div>)
       default:
         return [
           <button key="menuButton" className="menuButton" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
@@ -38,34 +41,43 @@ const Header = props => {
           </button>,
           <Menu
             id="simple-menu"
+            className="drop-down-menu"
             key="simpleMenu"
             anchorEl={anchorEl}
             keepMounted
             open={Boolean(anchorEl)}
             onClose={handleClose}>
-            <Link key="1" to="/profile"><MenuItem onClick={handleClose} >Profile</MenuItem></Link>
-            <Link key="2" to="/createproject"><MenuItem onClick={handleClose}>Create Project</MenuItem></Link>
-            <Link key="5" to="/projectProfile"><MenuItem onClick={handleClose}>Your Projects</MenuItem></Link>
-            <Link key="3" to="/searchusers"><MenuItem onClick={handleClose}>Search Users</MenuItem></Link>
-            <MenuItem key="4" onClick={handleClose}><a href="/api/logout">Logout</a></MenuItem>
+            <MenuItem key="4" onClick={handleClose}><a className="drop-down-menu" href="/api/logout">Logout</a></MenuItem>
           </Menu>
         ]
     }
   }
-
-
   return (
 
-    <nav>
-      <div className="nav-wrapper">
+    <AppBar >
+      <Toolbar>
         <Link
           to={'/'}
-          className="left-brand-logo menuButton ">Pro-Hub-2020</Link>
-        <ul id="nav-mobile" className="right">
+          className="menuButtonLogo" style={{ flex: 1 }} ><img className="logo-img" src={Logo} alt="Logo"></img></Link>
+        <button className="menuButton right" aria-controls="simple-menu" aria-haspopup="true" >
+          <Link to="/createproject">Create Project</Link>
+        </button>
+        <button className="menuButton " aria-controls="simple-menu" aria-haspopup="true" >
+          <Link to="/profile">Profile</Link>
+        </button>
+        <button className="menuButton right" aria-controls="simple-menu" aria-haspopup="true" >
+          <Link to="/projectProfile">Your Projects</Link>
+        </button>
+        <button className="menuButton right" aria-controls="simple-menu" aria-haspopup="true" >
+          <Link to="/searchusers">Search Users</Link>
+        </button>
+        <div className="right">
           {renderContent()}
-        </ul>
-      </div>
-    </nav >
+        </div>
+      </Toolbar>
+    </AppBar>
+
+
   )
 };
 

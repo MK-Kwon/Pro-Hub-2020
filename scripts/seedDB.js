@@ -16,7 +16,7 @@ const userSeed = [
     email: "j.thomson@user.com",
     photo: "img1",
     location: "NSW",
-    skills: ["React", "NodeJS", "AWS", "Photoshop", "Illustrator", "JavaScript"],
+    skills: "React, NodeJS, AWS, Photoshop, Illustrator, JavaScript",
     bio: "Web Developer",
     //Team_id: "Dreamteam"
   },
@@ -28,7 +28,7 @@ const userSeed = [
     email: "m.patel@user.com",
     photo: "img2",
     location: "QLD",
-    skills: ["Dot Net Developing", "Application Developing"],
+    skills: "Dot Net Developing, Application Developing",
     bio: "Software Developer",
     //Team_id: "Dreamteam"
   },
@@ -40,7 +40,7 @@ const userSeed = [
     email: "j.jean@user.com",
     photo: "img3",
     location: "WA",
-    skills: ["Full Stack Developing", "Graphic Design"],
+    skills: "Full Stack Developing, Graphic Design",
     bio: "Software Developer",
     //Team_id: "MyTeam"
   },
@@ -52,7 +52,7 @@ const userSeed = [
     email: "k.kate@user.com",
     photo: "img4",
     location: "SA",
-    skills: ["NodeJS", "JavaScript", ".Net Developing"],
+    skills: "NodeJS, JavaScript, .Net Developing",
     bio: "Web Developer",
     //Team_id: "MyTeam"
   }

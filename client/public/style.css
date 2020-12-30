@@ -1,79 +1,229 @@
-@import url('https://fonts.googleapis.com/css?family=Spartan&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 * {
-  font-family: 'Spartan';
-  margin: 0;
+  font-family: 'Raleway';
+  margin: 0 0 0 0;
   border-radius: 5px;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap');
+
 html {
-  background-image: url("./images/clement-falize-9uNFBOXBEBc-unsplash_optimized.jpg");
+  background-image: url("./images/Rectangular Marquee copy.jpg");
   background-attachment: fixed;
-  background-color: #4377ca;
+  background-color: white;
   border-radius: 0px;
   background-position: center;
   background-size: cover;
   height: 100vh;
-  margin: 0;
+  margin: 0 0 0 0;
   padding: 0;
 }
 
-.nav-wrapper {
-  background-color: rgba(33, 33, 33, 0.664);
-}
-
 #hero {
-  margin-top: 10px;
-  background-color: rgba(33, 33, 33, 0.664);
+  margin: 80px 0 0 0;
+  background-color: rgb(255,255,255, 0.65);
   text-align: center;
-  color: white;
-  text-shadow: 1px 2px rgba(33, 33, 33, 0.5);
-}
-
-h1, h5 {
-  color: white;
-  font-weight: 300 !important;
-}
-
-a:hover {
-  text-decoration: none;
-  color: #4377ca;
-}
-
-.contentContainer {
-  margin-top: 15px;
-}
-
-#profileName {
-  color: white;
-}
-
-#profileCard {
-  background-color: rgba(33, 33, 33, 0.5);
-  color: white;
-  min-height: 500px;
-}
-
-.nav-wrapper {
-  background-color: #424e7c;
-}
-
-.buttons {
-  background-color: #252525da !important;
-  display: block !important;
-  margin: 10px auto 10px auto;
-  border-radius: 5px !important;
-  box-shadow: 1px 2px rgba(33, 33, 33, 0.5);
+  color: #292e33;
   width: 100%;
 }
 
-#createTeamContainer {
-  background-color: rgba(33, 33, 33, 0.63);
+h1 {
+  margin: 1.2rem 0 0.2rem 0 !important;
+  font-weight: 800 !important;
+}
+
+h6 {
+  color: #7c838d !important;
+  margin: 0.3rem !important;
+}
+
+.contentContainer {
+  margin-top: 50px;
+  
+}
+
+.MuiAppBar-colorPrimary {
+  background-image: linear-gradient(to right, #863cfb , #5bb5f9);
+}
+
+#profileName {
+  color: #333;
+  font-size: 3.25rem;
+  font-weight: 700;
+}
+
+#profileName-user-search {
+  color: #853efb;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.profile {
+  color: #414141 !important;
+  font-size: 1rem !important;
+}
+
+.github-profile {
+  color: #414141 !important;
+}
+
+.github-profile-link a:hover {
+  color: #863dfa;
+  font-weight: 900;
+}
+
+.profile-project {
+  margin: 0 0 0 0 !important;
+}
+
+#profileCard {
+  background-image: url("./images/halftone.jpg");
+  opacity: 0.85;
+  z-index: -10;
+  background-repeat: no-repeat;
+  background-size: 1000px auto;
+  background-position: 50% 10%;
+  background-origin: content-box;
+  background-color: rgba(255, 255, 255);
   padding: 10px;
+  box-shadow: 0px 8px 8px rgba(0,0,0,0.37);
+  min-height: 1000px;
+}
+
+.logo-img {
+  width: 10rem;
+}
+
+li {
+  list-style-type: circle !important;
+}
+
+.myproject {
+  margin: 0px 0 0 20px ;
+}
+
+.menuButtonLogo {
+    vertical-align: middle;
+}
+
+.MuiCardContent-root {
+  background-image: url("./images/topbar-yellow.png");
+  z-index: 10;
+  background-repeat: no-repeat;
+  background-size: 80px 1000px;
+  background-position: -20% 50%;
+  background-origin: content-box;
+  position: relative;
+  padding: 50px 20px 20px 100px !important;
+ 
+}
+
+.MuiCard-root {
+  background-image: url("./images/sidebar-green.png");
+  z-index: 10;
+  background-repeat: no-repeat;
+  background-size: 80px 1000px;
+  background-position: -20% 50%;
+  background-origin: content-box;
+  position: relative;
+}
+
+.card-user-search {
+  background-image: url("./images/red.png");
+  z-index: 10;
+  background-repeat: no-repeat;
+  background-size: 80px 1000px;
+  background-position: -20% 50%;
+  background-origin: content-box;
+  position: relative;
+  padding: 50px 20px 20px 100px !important;
+}
+
+.buttons-user-search {
+  background-image: linear-gradient(to right, rgb(255,51,215), rgb(255,179,68)); 
+  letter-spacing: 0.3rem;
+  display: block !important;
+  margin: 30px auto 10px auto !important;
+  border-radius: 50px !important;
+  font-size: 1rem;
+  color: black;
+  width: 40%;
+}
+
+
+.nav-wrapper {
+  background-image: linear-gradient(to right, #863cfb , #5bb5f9);
+  margin: 0 0 0 0;
+  padding: 5px 5px 5px 5px;
+  width: 100%;
+}
+
+nav .nav-wrapper {
+  width: 145%;
+  margin: 0 0 0 0;
+  height: 140%;
+}
+
+.MuiAppBar-colorPrimary {
+  height: 70px;
+}
+
+.buttons {
+  background-image: linear-gradient(to right, rgb(255,51,215), rgb(255,179,68)); 
+  letter-spacing: 0.3rem;
+  display: block !important;
+  margin: 50px auto 10px auto !important;
+  border-radius: 50px !important;
+  font-size: 1rem;
+  color: black;
+  width: 40%;
+}
+
+.buttons-edit {
+  margin: 50px auto 10px auto !important;
+}
+
+#createTeamContainer {
+  background-image: url("./images/delivery-2103910-2.png");
+  opacity: 0.85;
+  z-index: -10;
+  background-repeat: no-repeat;
+  background-size: 1000px auto;
+  background-position: 85% 15%;
+  background-origin: content-box;
+  background-color: rgba(255, 255, 255);
+  padding: 10px;
+  box-shadow: 0px 8px 8px rgba(0,0,0,0.37);
+}
+
+#email {
+  background-image: url("./images/email.png");
+  opacity: 0.85;
+  z-index: -10;
+  background-repeat: no-repeat;
+  background-size: 1000px auto;
+  background-position: 77% 60%;
+  background-origin: content-box;
+  background-color: rgba(255, 255, 255);
+  padding: 10px;
+  box-shadow: 0px 8px 8px rgba(0,0,0,0.37);
+  height: 600px;
+}
+
+.footer {
+  color: #292e33;
+  letter-spacing: 0.3rem;
+  font-weight: bold;
 }
 
 #footer {
   text-align: center;
   line-height: 80px;
+}
+
+.bottom-msg {
+  z-index: 5;
+  position: relative;
 }
 
 p {
@@ -87,12 +237,25 @@ h4 {
 
 .pageTitle {
   text-align: center;
+  font-size: 3.25rem;
+  font-weight: 700;
+}
+
+.pageTitle-user-search {
+  text-align: center;
+  font-size: 3.25rem;
+  font-weight: 700;
+  margin-top: 85px !important;
 }
 
 .finderContainer {
   margin: 0 auto;
   overflow: visible;
   display: grid;
+}
+
+.user-search-card {
+  width: 98% !important;
 }
 
 .searchImage {
@@ -105,35 +268,132 @@ input {
   font-size: 16px;
 }
 
-.description_t {
-  border: 1px solid #9e9e9e;
+.enter_project_name {
+  border-collapse: 1px solid #9e9e9e;
   resize: none;
-  height: 100px;
-  color: #e5e5e5;
+  color: #414141;
   text-decoration: none;
   padding: 10px;
   font-size: 16px;
+  background-color: rgb(255,255,255, 0.8);
+}
+
+.description_t {
+  border: 1px solid #9e9e9e;
+  resize: none;
+  color: #414141;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 16px;
+  background-color: rgb(255,255,255, 0.8);
 }
 
 .description_t:focus {
   outline: 0;
-  border: 2px #26a69a solid;
+  border: 1.5px #555454 solid !important;
   font-size: 16px;
 }
 
+textarea {
+  height: 6.5rem !important;
+}
+
 #team_form_d {
-  padding: 10px;
+  padding: 2rem 4.5rem;
+  width: 43rem;
+}
+
+#team_form_d:focus {
+  outline: 0;
+  border-bottom: 1.5px #555454 solid !important;
+  font-size: 16px;
+}
+
+input[type=text]:not(.browser-default) {
+  border-bottom: 1.5px #9e9e9e solid !important;
+  font-size: 16px;
+  color: #414141;
+  box-shadow: none !important;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]) {
+  outline: 0;
+  border-bottom: 1.75px #555454 solid !important;
+  box-shadow: none !important;
+  font-size: 16px;
+}
+
+input:not([type]):focus:not([readonly]) {
+  outline: 0;
+  color: #414141;
+  border-bottom: 1.5px #555454 solid !important;
+  box-shadow: none !important;
+  font-size: 16px;
+}
+
+input[type=number]:not(.browser-default):focus:not([readonly]) {
+  outline: 0;
+  color: #414141;
+  border-bottom: 1.75px #555454 solid !important;
+  box-shadow: none !important;
+  font-size: 16px;
+}
+
+placeholder {
+  color: rgb(46, 46, 46);
+}
+
+.MuiCardContent-root-search-users {
+  background-image: url("./images/topbar-green.png");
+  z-index: 10;
+  background-repeat: no-repeat;
+  background-size: 98% auto !important;
+  background-position: -50% 50%;
+  background-origin: content-box;
+  position: relative;
+  padding: 50px 20px 20px 100px !important;
+}
+
+.input_form_img {
+  margin: 2.5rem 0 0 0;
+  position: relative;
+  z-index: -1;
+  height: 300px !important;
+  opacity: 0.9;
 }
 
 #add_current_location_b {
-  width: 300px;
+  color: white;
+  width: 35%;
   display: flex;
-  justify-content: flex-start;
-  margin: 5px 0px;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 5px 5px -15px;
+  background-color: #863ffa !important;
+  opacity: 0.7;
+  border-radius: 70px !important;
+}
+
+#add_current_location_b_2 {
+  color: white;
+  width: 23%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 5px 5px -15px;
+  background-color: #863ffa !important;
+  opacity: 0.7;
+  border-radius: 70px !important;
+}
+
+.team_lead  {
+  color: #414141 !important;
+  font-size: 16px;
 }
 
 #spinbox_i {
   width: 15%;
+  color: #414141;
 }
 
 input[type=number] {
@@ -153,8 +413,9 @@ input[type=number]:hover::-webkit-inner-spin-button {
 }
 
 #city_i {
-  width: 77%;
+  width: 45%;
   margin-right: 20px;
+  color: #414141;
 }
 
 #username_i {
@@ -182,9 +443,11 @@ input[type=number]:hover::-webkit-inner-spin-button {
 
 #link_github_b {
   width: 350px;
+  height: 50px;
   display: flex;
   justify-content: flex-start;
   margin: 5px 0px;
+  letter-spacing: 0.1rem;
 }
 
 #username_div {
@@ -199,7 +462,20 @@ input[type=number]:hover::-webkit-inner-spin-button {
 }
 
 #username_p {
+  color: #414141 !important;
   margin: 0px 0px;
+}
+
+.github_details {
+  color: #414141 !important;
+}
+
+.github_link {
+  color: #414141 !important;
+}
+
+.github_link:hover {
+  color: #8441fb !important;
 }
 
 #profile_picture_img {
@@ -234,25 +510,53 @@ input[type=number]:hover::-webkit-inner-spin-button {
 }
 
 .carousel_img {
+  margin: 2.5rem 0 0 0;
   position: relative;
-  z-index: 1;
+  z-index: -1;
   object-fit: cover;
   height: 715px !important;
+  opacity: 0.9;
   /* width: 1292px !important; */
 }
+.buttons-search-users {
+  background-image: linear-gradient(to right, rgb(255,51,215), rgb(255,179,68)); 
+  letter-spacing: 0.3rem;
+  display: block !important;
+  margin: 10px auto 50px auto !important;
+  border-radius: 50px !important;
+  font-size: 1rem;
+  color: black;
+  width: 40%;
+}
 
-/* .carousel_h1 {
-  z-index: 2;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 15px;
-  width: 75%;
-  margin: auto;
-  background-color: rgba(33, 33, 33, 0.75);
-  padding: 20px;
-  font-weight: 300;
-} */
+#searchUserCard {
+  background-image: url("./images/halftone.jpg");
+  opacity: 0.85;
+  z-index: -10;
+  background-repeat: no-repeat;
+  background-size: 1000px auto;
+  background-position: 50% 10%;
+  background-origin: content-box;
+  background-color: rgba(255, 255, 255);
+  padding: 10px;
+  box-shadow: 0px 8px 8px rgba(0,0,0,0.37);
+  height: 800px;
+}
+
+.contact-form {
+  background-image: url("./images/halftone.jpg");
+  opacity: 0.85;
+  z-index: -10;
+  background-repeat: no-repeat;
+  background-size: 1000px auto;
+  background-position: 50% 10%;
+  background-origin: content-box;
+  background-color: rgba(255, 255, 255);
+  padding: 10px;
+  box-shadow: 0px 8px 8px rgba(0,0,0,0.37);
+  height: 800px;
+  margin: 30px auto !important;
+}
 
 .uk-card-title {
   font-size: 3rem;
@@ -271,11 +575,28 @@ button:focus:first-child {
   font-size: 1.2rem;
   font-weight: 300;
   padding: 20px;
-  font-family: 'Spartan';
+}
+
+a {
+  color: white !important;
+}
+
+.drop-down-menu {
+  color: black !important;
+}
+
+.drop-down-menu:hover {
+  color: red !important;
+}
+
+a:hover {
+  color: #d7e2eb !important;
+  text-decoration: none !important;
 }
 
 .menuButton:hover {
   background-color: #ffffff17;
+  color: white !important;
 }
 
 .MuiMenuItem-root {
@@ -292,13 +613,32 @@ button:focus:first-child {
   color: black !important;
 }
 
+.search-user-instruction {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #555454;
+  margin: 5px 0 0 0;
+}
+
+.uk-active uk-transition-active {
+  margin: 0 0 0 0;
+}
+
 .userInfo {
   text-align: center;
   display: contents;
 }
 
 .uk-slideshow-items {
-  text-align: center;
+  
+  overflow: visible;
+  display: grid;
+  min-height: 700px !important;
+  max-height: 800px !important;
+}
+
+.uk-slideshow-items-user-search {
+  
   overflow: visible;
   display: grid;
   min-height: 700px !important;
@@ -306,24 +646,11 @@ button:focus:first-child {
 }
 
 #header_dropdown_menu:first-child {
-  color: black;
+  color: black !important;
 }
 
 .carousel_button {
-  z-index: 2;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 15px;
-  width: 75%;
-  margin: auto;
-  background-color: rgba(33, 33, 33, 0.75);
-  padding: 20px;
-  color: white;
-  font-weight: 300;
-  font-size: 2.92rem;
-  line-height: 110%;
-  border: 0px;
+  z-index: 5;
 }
 
 #projectButtonsDisplay {

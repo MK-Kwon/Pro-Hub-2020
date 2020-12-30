@@ -125,9 +125,9 @@ const Profile = props => {
     <motion.div initial="initial"
       animate="in"
       exit="out"
-      variants={pageVariants} className="contentContainer" className="contentContainer">
+      variants={pageVariants} className="contentContainer">
       <Container>
-        <div id="profileCard" className="uk-card uk-card-default uk-width-1-1@m" style={{ margin: "auto" }}>
+        <div id="profileCard">
           <div className="uk-card-header">
             <div className="uk-grid-large uk-flex-middle uk-grid">
               <div className="uk-width-auto">
@@ -136,67 +136,69 @@ const Profile = props => {
                   src={user.github_photo ? user.github_photo : user.photo}
                   id="profile_picture_img"
                   className="uk-border-circle"
-                  width="60" height="60"
+                  width="40" height="40"
                   alt="profile pic" ></img>
               </div>
               <div className="uk-width-expand">
-                <h3 id="profileName" className="uk-card-title uk-margin-remove-bottom">{user.first_name} {user.last_name}</h3>
+                <h3 id="profileName" className="uk-card-title uk-margin-remove-bottom">{user.first_name} {user.last_name}<span style={{ fontStyle: "italic" }}>'s Profile</span></h3>
                 <p className="uk-text-meta uk-margin-remove-top">{user.location}</p>
               </div>
             </div>
           </div>
-          <div className="uk-card-body">
-            <div>
-              <p>Email: {user.email}</p>
-              {user.github_username ? <p ><a target="_blank" rel="noopener noreferrer" href={user.github_url} alt="Github Link">Github Profile</a> || Followers: {user.followers} || Following: {user.following} || Repos: {user.repos}</p> : <> </>}
-            </div>
-            <div>
-              <p>Bio: {user.bio}</p>
-              <p>Skills: {user.skills}</p>
-              <p>City: {user.location}</p>
-            </div>
-            <p style={{ fontSize: "20px", fontWeidth: "100" }}>Projects</p>
-            <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "space-between" }}>
+          <div id="profile-background" className="uk-card-body">
+            <Card style={{ width: "98%", margin: "2px", padding: "50px 30px 30px 100px", backgroundColor: "rgba(255, 255, 255, 0.78)" }} className={classes.root}>
+              <ul>
+                <div>
+                  <li><p className="profile"><span style={{ color: "#863dfa", fontWeight: "900" }}>Email: </span> {user.email}</p></li>
+                  <li>{user.github_username ? <p className="github-profile"><a className="github-profile-link" target="_blank" rel="noopener noreferrer" href={user.github_url} alt="Github Link"><span className="github-profile-link" style={{ color: "#863dfa", fontWeight: "900" }}>Github Profile</span></a>|| Followers: {user.followers} || Following: {user.following} || Repos: {user.repos}</p> : <> </>}</li>
+                </div>
+                <div>
+
+                  <li><p className="profile"><span style={{ color: "#863dfa", fontWeight: "900" }}>Bio: </span>{user.bio}</p></li>
+                  <li><p className="profile"><span style={{ color: "#863dfa", fontWeight: "900" }}>Skills: </span>{user.skills}</p></li>
+                  <li><p className="profile"><span style={{ color: "#863dfa", fontWeight: "900" }}>City: </span>{user.location}</p></li>
+
+                </div>
+              </ul>
+            </Card>
+            <br></br>
+            <ul>
+              <li className="myproject"><p className="profile-project"><span style={{ color: "#505152", fontWeight: "900", fontSize: "1.25rem", margin: "0" }}>My Projects</span></p></li>
+            </ul>
+            
               {projects.map(project => {
                 console.log(project)
                 return (
-                  <Card style={{ width: "50px", margin: "10px", backgroundColor: "rgba(255, 255, 255, 0.78)" }} className={classes.root} id={project._id} key={project._id}>
+                  <div className="myproject-card">
+                  <Card  style={{ width: "98%", margin: "5px", backgroundColor: "rgba(255, 255, 255, 0.95)", padding: "160px, 10px, 5px, 50px" }} className={classes.root} id={project._id} key={project._id}>
                     <CardContent>
-                      <Typography variant="h5" component="h2">
-                        {project.project_name}
-                      </Typography>
-                      <Typography className={classes.title} gutterBottom>
-                        {project.description}
-                      </Typography>
-                      <Typography className={classes.pos}>
-                        {project.tags}
-                      </Typography>
-                      <Typography variant="body2" component="p">
-                        {projectUsers.map(user => {
-                          let full_name = `${user.first_name} ${user.last_name} `;
-                          return full_name;
-                        })}
+                      
+                      <ul>
+                      <li><p className="profile"><span style={{ color: "#863dfa", fontWeight: "900", fontSize: "1rem" }}>Name: </span>{project.project_name}</p></li>
+                      <li><p className="profile"><span style={{ color: "#863dfa", fontWeight: "900", fontSize: "1rem" }}>Description: </span>{project.description}</p></li>
+                      <li><p className="profile"><span style={{ color: "#863dfa", fontWeight: "900", fontSize: "1rem" }}>Tags: </span>{project.tags} </p></li>
+                      <li><p className="profile"><span style={{ color: "#863dfa", fontWeight: "900", fontSize: "1rem" }}>Team Members: </span>
+                        {projectUsers.map(user=> {
+                          let full_name = `${user.first_name}  ${user.last_name}, `;
+                          return full_name
+                          })}
                         <br />
-                      </Typography>
+                      </p></li>
+                      </ul>
+                      
                     </CardContent>
                   </Card>
+                  </div>
                 )
-
-                // let full_name = `${user.first_name} ${user.last_name} `;
-                // return full_name;
               })}
+            
+            <div id="buttonContainer">
+              <Link to="/editProfile"><motion.button whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }} className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Update Profile</motion.button></Link>
             </div>
-            <Link to="/editProfile"><button
-              className="uk-button uk-button-secondary buttons">Update Profile</button></Link>
-
           </div>
         </div>
-        <div id="buttonContainer">
-          <Link to="/createproject"><motion.button whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }} className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Create Project</motion.button></Link>
-          <Link to="/searchproject"><motion.button whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }} className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Search Project</motion.button></Link>
-        </div>
+
       </Container>
     </motion.div>
   );

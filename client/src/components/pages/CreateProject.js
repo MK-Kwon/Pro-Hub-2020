@@ -4,9 +4,8 @@ import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import { connect } from 'react-redux'
 import * as actions from '../../actions'
-import { usePosition } from 'use-position';
-import API from "../../utils/API";
-
+import { usePosition } from 'use-position'
+import API from "../../utils/API"
 
 const CreateProject = props => {
   const user = props.auth || {};
@@ -48,7 +47,7 @@ const CreateProject = props => {
       })
       .catch(err => console.log(err));
   };
-  const handleCreateProject =  (event) => {
+  const handleCreateProject = (event) => {
     // event.preventDefault();
     const data = {
       _id: projectState.id,
@@ -59,17 +58,17 @@ const CreateProject = props => {
       location: projectState.location,
       num_members: projectState.num_members,
       users: [user._id]
-      
+
     }
 
     API.postProject(data)
       .then(res => {
         console.log("After Request")
-        console.log(res.data)        
+        console.log(res.data)
       })
       .catch(err => console.log(err));
-    
-    
+
+
   };
 
   const handleNameChange = event => {
@@ -94,18 +93,19 @@ const CreateProject = props => {
       variants={pageVariants} className="contentContainer">
       <Container>
         <div id="createTeamContainer">
-          <h1 className="pageTitle">Create your Project!</h1>
+          <h3 className="pageTitle">Create your Project</h3>
           <hr></hr>
           <div id="team_form_d">
             <input
+              className="enter_project_name"
               value={projectState.project_name}
               type="text"
               placeholder="Enter Project Name"
               onBlur={(e) => e.target.placeholder = "Enter Project Name"}
               onFocus={(e) => e.target.placeholder = ""}
               onChange={(e) => handleNameChange(e)}>
-            </input>           
-            <p>Team Lead: {user.first_name} {user.last_name}</p>
+            </input>
+            <p className="team_lead">Team Lead: {user.first_name} {user.last_name}</p>
             <textarea
               className="description_t"
               type="input"
@@ -116,12 +116,24 @@ const CreateProject = props => {
               onChange={(e) => handleDescriptionChange(e)}>
             </textarea>
             <input
+              className="tags"
               type="text"
               placeholder="Tags"
               value={projectState.tags}
               onBlur={(e) => e.target.placeholder = "Tags"}
               onFocus={(e) => e.target.placeholder = ""}
               onChange={(e) => handleTagsChange(e)}>
+            </input>
+            <input
+              id="spinbox_i"
+              type="number"
+              min="2"
+              max="5"
+              value={projectState.num_members}
+              required placeholder="Number of Teammates"
+              onBlur={(e) => e.target.placeholder = "Number of Teammates"}
+              onFocus={(e) => e.target.placeholder = ""}
+              onChange={(e) => handleMembersChange(e)}>
             </input>
             <div id="location_div">
               <input
@@ -138,36 +150,22 @@ const CreateProject = props => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={get_location}
-                className="uk-button uk-button-secondary uk-button-large uk-flex-left buttons">Use Current Location</button>
+              >Use Current Location</button>
             </div>
             {/* <input tyoe="number" step="3" placeholder="Tags" onBlur={(e) => e.target.placeholder = "Tags"} onFocus={(e) => e.target.placeholder = ""}></input> */}
-            <input
-              id="spinbox_i"
-              type="number"
-              min="2"
-              max="5"
-              value={projectState.num_members}
-              required placeholder="Number of Teammates"
-              onBlur={(e) => e.target.placeholder = "Number of Teammates"}
-              onFocus={(e) => e.target.placeholder = ""}
-              onChange={(e) => handleMembersChange(e)}>
-            </input>
+
           </div>
-        </div>
-        <div id="buttonContainer">
-          <Link to="/profile">
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons">Back to Profile</motion.button>
-          </Link>
-          <Link to="/searchusers">
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons"
-              onClick={handleCreateProject}>Submit Project</motion.button>
-          </Link>
+
+
+          <div id="buttonContainer">
+            <Link to="/searchusers">
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons"
+                onClick={handleCreateProject}>Submit Project</motion.button>
+            </Link>
+          </div>
         </div>
       </Container>
     </motion.div >
