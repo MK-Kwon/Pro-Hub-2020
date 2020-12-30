@@ -1,7 +1,7 @@
 const db = require("../models");
+
 // const axios = require("axios")
 const axios = require("axios");
-
 
 // Export API Routes to Express
 module.exports = function (app) {
@@ -90,8 +90,6 @@ module.exports = function (app) {
     //   res.send(error)
     // }
   });
-
-
 
   //=====================================================================
   //                        Users
@@ -235,7 +233,6 @@ module.exports = function (app) {
       res.send(error)
     }
   });
-
 };
 
 

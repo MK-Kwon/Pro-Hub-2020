@@ -240,7 +240,7 @@ const EditProfile = props => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={get_location}
-                >Use Current Location</button>
+              >Use Current Location</button>
             </div>
 
             <Link to="/profile"><motion.button whileHover={{ scale: 1.1 }}

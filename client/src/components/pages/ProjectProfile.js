@@ -1,5 +1,4 @@
 // This component is to display user data on the page. If they want to update their information, they must go to the dashboard component.
-
 import React, { useState, useEffect } from 'react'
 import Container from '@material-ui/core/Container'
 import { Link } from "react-router-dom"
@@ -56,13 +55,9 @@ const ProjectProfile = props => {
     get_project_ids();
     get_users();
   }, []);
-
-
-
   const [projectState, setProjectState] = useState([]);
   const [projects, setProjects] = useState([]);
   const [projectUsers, setProjectUser] = useState([]);
-
 
   const get_users = () => {
     API.getUsers()
@@ -86,7 +81,6 @@ const ProjectProfile = props => {
 
         })
         get_projects_from_user(user_project_ids)
-
       })
   }
 
@@ -116,7 +110,6 @@ const ProjectProfile = props => {
               console.log("project.map")
               console.log(id)
               showUser(id);
-
             })
           })
 
@@ -126,45 +119,41 @@ const ProjectProfile = props => {
     })
 
   };
-
-
-
   return (
     <motion.div initial="initial"
       animate="in"
       exit="out"
       variants={pageVariants} className="contentContainer">
       <Container>
-      <div id="profileCard">
-        <div>
-          {projects.map(project => {
-            return (
-              <div className="myproject-card">
-               <Card  style={{ width: "90%", margin: "30px auto", backgroundColor: "rgba(255, 255, 255, 0.95)", padding: "160px, 10px, 5px, 50px" }} id={project._id} key={project._id}>
-                <CardContent>
-                <ul>
-                      <li><p className="profile"><span style={{ color: "#863dfa", fontWeight: "900", fontSize: "1rem" }}>Name: </span>{project.project_name}</p></li>
-                      <li><p className="profile"><span style={{ color: "#863dfa", fontWeight: "900", fontSize: "1rem" }}>Description: </span>{project.description}</p></li>
-                      <li><p className="profile"><span style={{ color: "#863dfa", fontWeight: "900", fontSize: "1rem" }}>Tags: </span>{project.tags} </p></li>
-                      <li><p className="profile"><span style={{ color: "#863dfa", fontWeight: "900", fontSize: "1rem" }}>Team Members: </span>
-                        {projectUsers.map(user=> {
-                          let full_name = `${user.first_name}  ${user.last_name}, `;
-                          return full_name
+        <div id="profileCard">
+          <div>
+            {projects.map(project => {
+              return (
+                <div className="myproject-card">
+                  <Card style={{ width: "90%", margin: "30px auto", backgroundColor: "rgba(255, 255, 255, 0.95)", padding: "160px, 10px, 5px, 50px" }} id={project._id} key={project._id}>
+                    <CardContent>
+                      <ul>
+                        <li><p className="profile"><span style={{ color: "#863dfa", fontWeight: "900", fontSize: "1rem" }}>Name: </span>{project.project_name}</p></li>
+                        <li><p className="profile"><span style={{ color: "#863dfa", fontWeight: "900", fontSize: "1rem" }}>Description: </span>{project.description}</p></li>
+                        <li><p className="profile"><span style={{ color: "#863dfa", fontWeight: "900", fontSize: "1rem" }}>Tags: </span>{project.tags} </p></li>
+                        <li><p className="profile"><span style={{ color: "#863dfa", fontWeight: "900", fontSize: "1rem" }}>Team Members: </span>
+                          {projectUsers.map(user => {
+                            let full_name = `${user.first_name}  ${user.last_name}, `;
+                            return full_name
                           })}
-                        <br />
-                      </p></li>
+                          <br />
+                        </p></li>
                       </ul>
-                </CardContent>
-              </Card>
-              </div>
-            )
-          })}
-        </div>
-
-        <div id="buttonContainer">
-          <Link to="/createproject"><motion.button whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }} className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Create Project</motion.button></Link>
-        </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              )
+            })}
+          </div>
+          <div id="buttonContainer">
+            <Link to="/createproject"><motion.button whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }} className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Create Project</motion.button></Link>
+          </div>
         </div>
       </Container>
     </motion.div>

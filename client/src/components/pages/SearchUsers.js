@@ -4,7 +4,6 @@ import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import API from "../../utils/API"
 import { makeStyles } from '@material-ui/core/styles'
-// import Button from '@material-ui/core/Button'
 import { connect } from 'react-redux'
 import * as actions from '../../actions'
 import Card from '@material-ui/core/Card'
@@ -23,7 +22,6 @@ const SearchUsers = (props) => {
 
   // const classes = useStyles();
   const [anchorEl, setAnchorEl] = useState(null);
-
 
   const handleClose = () => {
     setAnchorEl(null);
@@ -52,7 +50,6 @@ const SearchUsers = (props) => {
   const [projectState, setProjectState] = useState([]);
   const [projects, setProjects] = useState([]);
 
-
   const get_users = () => {
     API.getUsers()
       .then(res => {
@@ -79,7 +76,6 @@ const SearchUsers = (props) => {
         console.log("After Add User")
         console.log(res.data)
         // setProjects(res.data);
-
         addProjectToUser(userId, projectId);
       })
       .catch(err => console.log(err));
@@ -115,10 +111,7 @@ const SearchUsers = (props) => {
           <h1 className="pageTitle-user-search">Find Team-Mates</h1>
           <p className="search-user-instruction">Swipe left or right to browse potential teammates</p>
           {/* UIKit's slideshow to cycle through the user database. */}
-
-
           <div className="uk-width-auto">
-
             <div className="uk-visible-toggle uk-light finderContainer" tabIndex="-1" uk-slideshow="animation: pull">
               <ul className="uk-slideshow-items">
                 {projectState.map(user => {
@@ -128,9 +121,7 @@ const SearchUsers = (props) => {
                       onClick={() => handleAddUsers(user._id)}
                     >
                       {/* onChange={(e) => console.log(user._id)} > */}
-
                       <Card style={{ width: "90%", margin: "20px 30px 0 50px ", backgroundColor: "rgba(255, 255, 255, 0.95)", padding: "160px, 10px, 5px, 50px" }}>
-
                         <CardContent className="card-user-search">
                           <div className="uk-width-expand">
                             <p id="profileName-user-search" className="uk-card-title uk-margin-remove-bottom"><span style={{ fontStyle: "italic", fontWeight: "900" }}>{user.first_name} {user.last_name}</span></p>
@@ -142,17 +133,12 @@ const SearchUsers = (props) => {
                               {user.github_username ? <p className="github-profile"><a className="github-profile-link" target="_blank" rel="noopener noreferrer" href={user.github_url} alt="Github Link"><span className="github-profile-link" style={{ color: "#863dfa", fontWeight: "900" }}>Github Profile</span></a>|| Followers: {user.followers} || Following: {user.following} || Repos: {user.repos}</p> : <> </>}
                             </div>
                             <div>
-
                               <p className="profile"><span style={{ color: "#863dfa", fontWeight: "900" }}>Bio: </span>{user.bio}</p>
                               <p className="profile"><span style={{ color: "#863dfa", fontWeight: "900" }}>Skills: </span>{user.skills}</p>
                               <p className="profile"><span style={{ color: "#863dfa", fontWeight: "900" }}>City: </span>{user.location}</p>
-
                             </div>
                           </ul>
-
                         </CardContent>
-
-
                       </Card>
                       <Link to="/emailuser">
                         <motion.button
@@ -166,21 +152,11 @@ const SearchUsers = (props) => {
                           onClick={handleAddUsers}
                         >
                           Ask them to join
-            </motion.button></Link>
-
-
+                        </motion.button></Link>
                     </li>
                   )
                 })}
               </ul>
-
-
-
-
-
-
-
-
             </div>
           </div>
         </div>

@@ -6,7 +6,6 @@ const keys = require("../config/keys");
 // mongoose.connect(keys.mongoURI || "mongodb://localhost/colabdb");
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/pro-hub-2020", { useNewUrlParser: true });
 
-
 const userSeed = [
   {
     googleId: "398230",
@@ -57,7 +56,6 @@ const userSeed = [
     //Team_id: "MyTeam"
   }
 ]
-
 
 const projectSeed = [
   {

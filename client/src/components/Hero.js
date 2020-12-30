@@ -1,5 +1,4 @@
 // Welcome to the Dream Team's Co-Lab Project! This is our landing page.
-
 import React from 'react'
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
