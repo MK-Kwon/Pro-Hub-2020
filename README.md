@@ -26,8 +26,6 @@
 
 <img src="http://drive.google.com/uc?id=1VY12aHP78HxNVN1TyxieVu_PdAEPivmm" width ="100%" height="auto">
 
-<img src="https://thumbs.gfycat.com/SoupyWateryFlatcoatretriever-size_restricted.gif" width ="100%" height="auto">
-
 <img src="https://thumbs.gfycat.com/InexperiencedHeftyGemsbuck-size_restricted.gif" width ="100%" height="auto">
 
 <img src="https://thumbs.gfycat.com/ScalyReasonableFox-size_restricted.gif" width ="100%" height="auto">
