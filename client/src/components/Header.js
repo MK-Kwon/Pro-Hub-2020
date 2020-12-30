@@ -76,8 +76,6 @@ const Header = props => {
         </div>
       </Toolbar>
     </AppBar>
-
-
   )
 };
 

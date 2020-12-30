@@ -1,5 +1,4 @@
 // This component is to display user data on the page. If they want to update their information, they must go to the dashboard component.
-
 import React, { useEffect, useState } from 'react'
 import Container from '@material-ui/core/Container'
 import { Link } from "react-router-dom"
@@ -11,8 +10,6 @@ import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
 import API from "../../utils/API";
-
-
 
 const Profile = props => {
   const user = props.auth || {};
@@ -85,14 +82,10 @@ const Profile = props => {
           user_project_ids.push(userProjectId._id)
           console.log(user_project_ids)
           console.log(user_project_ids)
-
         })
         get_projects_from_user(user_project_ids)
-
       })
   }
-
-
   const get_projects_from_user = (data) => {
     const projects = [];
     data.forEach(id => {
@@ -153,11 +146,9 @@ const Profile = props => {
                   <li>{user.github_username ? <p className="github-profile"><a className="github-profile-link" target="_blank" rel="noopener noreferrer" href={user.github_url} alt="Github Link"><span className="github-profile-link" style={{ color: "#863dfa", fontWeight: "900" }}>Github Profile</span></a>|| Followers: {user.followers} || Following: {user.following} || Repos: {user.repos}</p> : <> </>}</li>
                 </div>
                 <div>
-
                   <li><p className="profile"><span style={{ color: "#863dfa", fontWeight: "900" }}>Bio: </span>{user.bio}</p></li>
                   <li><p className="profile"><span style={{ color: "#863dfa", fontWeight: "900" }}>Skills: </span>{user.skills}</p></li>
                   <li><p className="profile"><span style={{ color: "#863dfa", fontWeight: "900" }}>City: </span>{user.location}</p></li>
-
                 </div>
               </ul>
             </Card>
@@ -165,40 +156,35 @@ const Profile = props => {
             <ul>
               <li className="myproject"><p className="profile-project"><span style={{ color: "#505152", fontWeight: "900", fontSize: "1.25rem", margin: "0" }}>My Projects</span></p></li>
             </ul>
-            
-              {projects.map(project => {
-                console.log(project)
-                return (
-                  <div className="myproject-card">
-                  <Card  style={{ width: "98%", margin: "5px", backgroundColor: "rgba(255, 255, 255, 0.95)", padding: "160px, 10px, 5px, 50px" }} className={classes.root} id={project._id} key={project._id}>
+            {projects.map(project => {
+              console.log(project)
+              return (
+                <div className="myproject-card">
+                  <Card style={{ width: "98%", margin: "5px", backgroundColor: "rgba(255, 255, 255, 0.95)", padding: "160px, 10px, 5px, 50px" }} className={classes.root} id={project._id} key={project._id}>
                     <CardContent>
-                      
                       <ul>
-                      <li><p className="profile"><span style={{ color: "#863dfa", fontWeight: "900", fontSize: "1rem" }}>Name: </span>{project.project_name}</p></li>
-                      <li><p className="profile"><span style={{ color: "#863dfa", fontWeight: "900", fontSize: "1rem" }}>Description: </span>{project.description}</p></li>
-                      <li><p className="profile"><span style={{ color: "#863dfa", fontWeight: "900", fontSize: "1rem" }}>Tags: </span>{project.tags} </p></li>
-                      <li><p className="profile"><span style={{ color: "#863dfa", fontWeight: "900", fontSize: "1rem" }}>Team Members: </span>
-                        {projectUsers.map(user=> {
-                          let full_name = `${user.first_name}  ${user.last_name}, `;
-                          return full_name
+                        <li><p className="profile"><span style={{ color: "#863dfa", fontWeight: "900", fontSize: "1rem" }}>Name: </span>{project.project_name}</p></li>
+                        <li><p className="profile"><span style={{ color: "#863dfa", fontWeight: "900", fontSize: "1rem" }}>Description: </span>{project.description}</p></li>
+                        <li><p className="profile"><span style={{ color: "#863dfa", fontWeight: "900", fontSize: "1rem" }}>Tags: </span>{project.tags} </p></li>
+                        <li><p className="profile"><span style={{ color: "#863dfa", fontWeight: "900", fontSize: "1rem" }}>Team Members: </span>
+                          {projectUsers.map(user => {
+                            let full_name = `${user.first_name}  ${user.last_name}, `;
+                            return full_name
                           })}
-                        <br />
-                      </p></li>
+                          <br />
+                        </p></li>
                       </ul>
-                      
                     </CardContent>
                   </Card>
-                  </div>
-                )
-              })}
-            
+                </div>
+              )
+            })}
             <div id="buttonContainer">
               <Link to="/editProfile"><motion.button whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }} className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons" >Update Profile</motion.button></Link>
             </div>
           </div>
         </div>
-
       </Container>
     </motion.div>
   );
