@@ -63,7 +63,7 @@ Node & Npm version
 
 ## Install
 
-ProHub requires no installation. Just sign in with your Google or Github account at http://pro-hub.herokuapp.com/ and start using the app!
+ProHub requires no installation. Just sign in with your Google, Github account or as a guest at http://pro-hub.herokuapp.com/ and start using the app!
 
 ## Built With
 
