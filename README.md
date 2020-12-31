@@ -47,6 +47,17 @@
 
 ## Prerequisites
 
+Google Sign-In officially supports the following browsers and platforms:
+
+- Google Chrome on macOS, Windows, Linux, Android, iOS
+- Mozilla Firefox on macOS, Windows, Linux
+- Safari on macOS and iOS
+- Internet Explorer versions from 8 to 11 on Windows
+- Microsoft Edge on Windows
+
+
+Node & Npm version
+
 - node ^14.15.1
 - npm 7.0.14
 
@@ -77,7 +88,7 @@ ProHub requires no installation. Just sign in with your Google or Github account
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/MK-Kwon/roadstar/issues). You can also take a look at the [contributing guide](https://github.com/MK-Kwon/roadstar/blob/master/CONTRIBUTING.md).
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/MK-Kwon/Pro-Hub-2020/issues). You can also take a look at the [contributing guide](https://github.com/MK-Kwon/Pro-Hub-2020/blob/master/CONTRIBUTING.md).
 
 ## Author
 
