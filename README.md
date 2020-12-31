@@ -10,6 +10,10 @@
 
 ### 🏠 [Homepage](https://github.com/MK-Kwon/Pro-Hub-2020#readme)
 
+### ✨ [Demo](http://pro-hub.herokuapp.com/)
+
+### Deployed App: http://pro-hub.herokuapp.com/
+
 # ProHub
 
 > ProHub is an app that lets you find real-life team members for any project you plan on. As a developer it is not so easy to work on a team outside of a professional setting. With Pro-Hub-2020 it gives individuals the chance to meet up with local developers to collaborate on a project. Whether you're just building your portfolio, or needing an extra set of hands, ProHub will make your project come alive.
@@ -48,7 +52,7 @@
 
 ## Install
 
-ProHub doesn't require installation. 
+ProHub requires no installation. Just sign in with your Google or Github account at http://pro-hub.herokuapp.com/ and start using the app!
 
 ## Built With
 
