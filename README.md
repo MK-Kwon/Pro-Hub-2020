@@ -16,7 +16,7 @@
 
 # ProHub
 
-> ProHub is an app that lets you find real-life team members for any project you plan on. As a developer it is not so easy to work on a team outside of a professional setting. With Pro-Hub-2020 it gives individuals the chance to meet up with local developers to collaborate on a project. Whether you're just building your portfolio, or needing an extra set of hands, ProHub will make your project come alive.
+> ProHub is a MERN stack app that lets you find real-life team members for any project you plan on. As a developer it is not so easy to work on a team outside of a professional setting. With Pro-Hub-2020 it gives individuals the chance to meet up with local developers to collaborate on a project. Whether you're just building your portfolio, or needing an extra set of hands, ProHub will make your project come alive.
 
 <img src="http://drive.google.com/uc?id=1efVz2yTP2SBUSWkV5Cu1iwUX-JuXKuQo" width ="100%" height="auto">
 
