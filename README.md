@@ -67,6 +67,7 @@ ProHub requires no installation. Just sign in with your Google, Github account o
 
 ## Built With
 
+* Figma(https://www.figma.com/) - Wire Framing and Prototyping
 * [Google OAuth 2.0](https://developers.google.com/identity/protocols/oauth2) - We used OAuth 2.0 to access Google APIs
 * [UI Kit](https://getuikit.com/docs/introduction) - We used UIkit CSS framework for a fully responsive website and design. 
 * [Material UI](https://material-ui.com/) - We used UIkit CSS framework for a fully responsive website and design. 
