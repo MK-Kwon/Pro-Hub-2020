@@ -74,7 +74,7 @@ ProHub requires no installation. Just sign in with your Google, Github account o
 * [Adobe Photoshop & Illustrator] - We used Adobe Photoshop & Illustrator for designing UI/UX of the app.
 * [Freepik](https://www.freepik.com/) - We used Freepik for background images.
 * ProHub Logo was created by Min Kyung Kwon.
-* All UI/UX development was done by Min Kyung Kwon
+* All UI/UX and Front-End development was done by Min Kyung Kwon
 * Back-End development was done by James Lee
 
 ## Technologies
