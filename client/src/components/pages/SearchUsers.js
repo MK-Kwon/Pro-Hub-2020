@@ -108,7 +108,7 @@ const SearchUsers = (props) => {
       variants={pageVariants} >
       <Container >
         <div id="searchUserCard">
-          <h1 className="pageTitle-user-search">Find Team-Mates</h1>
+          <h3 className="pageTitle-user-search">Find Team-Mates</h3>
           <p className="search-user-instruction">Swipe left or right to browse potential teammates</p>
           {/* UIKit's slideshow to cycle through the user database. */}
           <div className="uk-width-auto">
@@ -121,8 +121,7 @@ const SearchUsers = (props) => {
                       onClick={() => handleAddUsers(user._id)}
                     >
                       {/* onChange={(e) => console.log(user._id)} > */}
-                      <Card style={{ width: "90%", margin: "20px 30px 0 50px ", backgroundColor: "rgba(255, 255, 255, 0.95)", padding: "160px, 10px, 5px, 50px" }}>
-                        <CardContent className="card-user-search">
+                      <CardContent style={{ width: "98%", margin: "5px", backgroundColor: "rgba(255, 255, 255, 0.95)", padding: "50px 20px 20px 100px" }} >
                           <div className="uk-width-expand">
                             <p id="profileName-user-search" className="uk-card-title uk-margin-remove-bottom"><span style={{ fontStyle: "italic", fontWeight: "900" }}>{user.first_name} {user.last_name}</span></p>
                             <p className="uk-text-meta uk-margin-remove-top">{user.location}</p>
@@ -138,20 +137,19 @@ const SearchUsers = (props) => {
                               <p className="profile"><span style={{ color: "#863dfa", fontWeight: "900" }}>City: </span>{user.location}</p>
                             </div>
                           </ul>
-                        </CardContent>
-                      </Card>
+                      </CardContent>
                       <Link to="/emailuser">
                         <motion.button
                           id="menuButton"
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.9 }}
-                          className="uk-button uk-button-large buttons-user-search"
+                          className="uk-button uk-button-secondary uk-button-large uk-width-1-2@m buttons"
                           aria-controls="simple-menu"
                           aria-haspopup="true"
                           style={{ color: "white" }}
                           onClick={handleAddUsers}
                         >
-                          Ask them to join
+                          CONTACT
                         </motion.button></Link>
                     </li>
                   )

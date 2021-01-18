@@ -42,23 +42,23 @@ const Hero = (props) => {
         <ul className="uk-slideshow-items">
           <li>
             <Link key="1" to="/createproject" className="carousel_button"><ButtonHover2>Start a Project</ButtonHover2></Link>
-            <img className="carousel_img" src={require("../images/subscribe,email,news,subscription,online,newsletter,media,communication,web,message,lost in space,space,discovery,technology,internet,mail subscriber,new subscriber,mail,new discovery,discover,onboard,welcome,connection,tech,1768778.png").default} alt="desk with notebook" uk-cover="true" />
+            <img className="carousel_img" src={require("../images/subscribe,email,news,subscription,online,newsletter,media,communication,web,message,lost in space,space,discovery,technology,internet,mail subscriber,new subscriber,mail,new discovery,discover,onboard,welcome,connection,tech,1768778.png").default} alt="technology" uk-cover="true" />
           </li>
           <li>
             <Link key="1" to="/profile" className="carousel_button"><ButtonHover>Create a Profile</ButtonHover></Link>
-            <img className="carousel_img" src={require("../images/data-2103908-0.png").default} alt="typing on laptop" uk-cover="true" />
+            <img className="carousel_img" src={require("../images/data-2103908-0.png").default} alt="chart and graphs" uk-cover="true" />
           </li>
           <li>
             <Link key="1" to="/searchusers" className="carousel_button"><ButtonHover3>Invite your Friends</ButtonHover3></Link>
-            <img className="carousel_img" src={require("../images/startup-launch-2040891-1.png").default} alt="hand with chalk" uk-cover="true" />
+            <img className="carousel_img" src={require("../images/startup-launch-2040891-1.png").default} alt="group of friends" uk-cover="true" />
           </li>
           <li>
             <Link key="1" to="/searchprojects" className="carousel_button"><ButtonHover4>Find your Calling</ButtonHover4></Link>
-            <img className="carousel_img" src={require("../images/success-2103482-0.png").default} alt="gardening" uk-cover="true" />
+            <img className="carousel_img" src={require("../images/success-2103482-0.png").default} alt="getting excited about starting" uk-cover="true" />
           </li>
           <li>
             <a target="_blank" rel="noopener noreferrer" href="http://weavesilk.com/" className="carousel_button"><ButtonHover5 >Have Some Fun</ButtonHover5></a>
-            <img className="carousel_img" src={require("../images/3309870.png").default} alt="hands all together" uk-cover="true" />
+            <img className="carousel_img" src={require("../images/3309870.png").default} alt="group of people celebrating" uk-cover="true" />
           </li>
         </ul>
         <a className="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous="true" uk-slideshow-item="previous"></a>

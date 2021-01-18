@@ -106,7 +106,579 @@ li {
     vertical-align: middle;
 }
 
-.MuiCardContent-root {
+.menuButton2, .menuButtonLogo2, .right2, .nav-wrapper, nav  {
+  display: none !important;
+}
+
+
+.menuButton2 {
+  border: 0px;
+  background-color: transparent;
+  color: white !important;
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding: 20px;
+}
+
+#simple-menu2 {
+  margin-top: 40px;
+  margin-left: 20px;
+}
+
+.right2 {
+  float: right !important;
+}
+
+nav {
+  background-color: transparent !important;
+  top: 0;
+  left: auto;
+  right: 0;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  z-index: 1100;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  flex-direction: column;
+  height: 70px !important;
+}
+
+#nav-mobile {
+  font-size: 14px !important;
+}
+
+@media screen and (max-width: 3000px) {
+
+  .MuiCard-root {
+    background-size: 120px 1000px !important;
+  }
+
+  .MuiCardContent-root, .makeStyles-root-89 {
+    background-size: 120px 1000px !important;
+  }
+
+}
+
+@media screen and (max-width: 1800px) {
+
+  .MuiCard-root {
+    background-size: 100px 1000px !important;
+  }
+
+  .MuiCardContent-root, .makeStyles-root-89 {
+    background-size: 100px 1000px !important;
+  }
+  
+}
+
+@media screen and (max-width: 1500px) {
+
+  .MuiCard-root {
+    background-size: 90px 1000px !important;
+  }
+
+  .MuiCardContent-root, .makeStyles-root-89 {
+    background-size: 90px 1000px !important;
+  }
+  
+}
+
+@media screen and (max-width: 1280px) {
+
+.MuiCard-root {
+  background-size: 70px 1000px !important;
+}
+
+.MuiCardContent-root, .makeStyles-root-89 {
+  background-size: 70px 1000px !important;
+}
+
+}
+
+@media screen and (max-width: 980px) {
+  .menuButton right, .menuButton, .right, nav {
+    display: none;
+  }
+  .menuButton2, .menuButtonLogo2, .right2, .nav-wrapper, nav  {
+    display: initial !important;
+    font-size: 20px !important;
+  }
+  #nav-mobile {
+    font-size: 20px !important;
+  }
+  .MuiPaper-root {font-size: 25px !important;
+  }
+  element.style {
+    top: 24px;
+    left: 300px;
+    font-size: 25px !important;
+  }
+  
+  .MuiMenu-paper {
+    max-height: calc(100% - 500px)!important;
+    font-size: 25px !important;
+  }
+  
+  .MuiPopover-paper {
+    position: absolute;
+    max-width: calc(100% - 100px)!important;
+    min-width: 220px !important;
+    min-height: 280px !important;
+    font-size: 25px !important;
+  }
+  
+  .MuiPaper-root {
+    color: rgb(75, 75, 75) !important;
+  }
+  
+  .MuiButtonBase-root, .MuiListItem-root, .MuiMenuItem-root, .MuiMenuItem-gutters, .MuiListItem-gutters, .MuiListItem-button {
+    font-size: 16px !important;
+  }
+
+  h1 {
+    font-size: 3.5rem !important;
+  }
+
+  h6 {
+    font-size: 1rem !important
+  }
+
+ .container {
+    margin: 0 auto !important;
+    width: 96% !important;
+  }
+
+  .uk-slideshow-items {
+  
+    overflow: visible;
+    display: grid;
+    min-height: 200px !important;
+    max-height: 300px !important;
+  }
+
+  #createTeamContainer {
+    background-size: 600px auto !important;
+    width: 340px !important;
+    height: 900px !important;
+    margin: 0 auto;
+    background-image: none !important;
+  }
+
+  .contentContainer {
+    margin: 50px auto !important;
+  }
+
+  .buttons {
+    margin-top: 60px !important;
+    width: 90% !important;
+  }
+  input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+    font-size: 16px !important;
+  }
+
+  #add_current_location_b {
+    display: block !important;
+    width: 70% !important;
+    font-size: 20px;
+    padding: 10px;
+    margin: 55px 100px 5px -220px !important;
+  }
+
+  .description_t {
+    height: 20rem !important;
+    font-size: 20px !important;
+  }
+
+  #team_form_d {
+    padding: 2.5rem 0.5rem 0.5rem 0.5rem !important;
+    width: 23rem !important;
+    margin: 0 auto !important;
+  }
+  .team_lead {
+    font-size: 16px !important;
+  }
+
+  h3, #profileName, .uk-card-title {
+    font-size: 2rem !important;
+  }
+
+  .uk-width-expand {
+    flex: none !important;
+  }
+
+  #profile_picture_img {
+    margin-top: 3px !important;
+  }
+
+  .MuiContainer-root {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .MuiPaper-root, .MuiCard-root, .makeStyles-root-5, .MuiPaper-elevation1, .MuiPaper-rounded {
+    padding: 10px !important;
+  }
+
+  .MuiCard-root {
+    background-image: none !important;
+  }
+
+  .uk-card-body {
+    padding: 0 !important;
+  }
+
+  .github-profile {
+    font-size: 14px !important;
+  }
+
+  .MuiCardContent-root {
+    background-image: none !important;
+    padding: 10px !important;
+  }
+  
+  .MuiPaper-root, .MuiCard-root, .makeStyles-root-45, .MuiPaper-elevation1, .MuiPaper-rounded {
+    padding: 10px !important;
+  }
+
+  .myproject-card {
+    padding: 10px !important;
+  }
+
+  li {
+    list-style-type: none !important
+  }
+
+  #city_i {
+    width: 65% !important;
+  }
+
+  .search-user-instruction {
+    font-size: 1rem !important;
+  }
+  
+  #searchUserCard {
+    height: 550px !important;
+  }
+
+}
+
+@media screen and (max-width: 736px) {
+  .menuButton right, .menuButton, .right, nav {
+    display: none;
+  }
+  .menuButton2, .menuButtonLogo2, .right2, .nav-wrapper, nav  {
+    display: initial !important;
+    font-size: 20px !important;
+  }
+  #nav-mobile {
+    font-size: 20px !important;
+  }
+  .MuiPaper-root {font-size: 25px !important;
+  }
+  element.style {
+    top: 24px;
+    left: 300px;
+    font-size: 25px !important;
+  }
+  
+  .MuiMenu-paper {
+    max-height: calc(100% - 500px)!important;
+    font-size: 25px !important;
+  }
+  
+  .MuiPopover-paper {
+    position: absolute;
+    max-width: calc(100% - 100px)!important;
+    min-width: 220px !important;
+    min-height: 280px !important;
+    font-size: 25px !important;
+  }
+  
+  .MuiPaper-root {
+    color: rgb(75, 75, 75) !important;
+  }
+  
+  .MuiButtonBase-root, .MuiListItem-root, .MuiMenuItem-root, .MuiMenuItem-gutters, .MuiListItem-gutters, .MuiListItem-button {
+    font-size: 16px !important;
+  }
+
+  h1 {
+    font-size: 3rem !important;
+  }
+
+  h6 {
+    font-size: 0.8rem !important
+  }
+
+  .container {
+    margin: 0 auto !important;
+    width: 96% !important;
+  }
+
+  .uk-slideshow-items {
+  
+    overflow: visible;
+    display: grid;
+    min-height: 200px !important;
+    max-height: 300px !important;
+  }
+
+  #createTeamContainer {
+    background-size: 600px auto !important;
+    width: 340px !important;
+    height: 900px !important;
+    margin: 0 auto;
+    background-image: none !important;
+  }
+
+  .contentContainer {
+    margin: 50px auto !important;
+  }
+
+  .buttons {
+    margin-top: 60px !important;
+    width: 90% !important;
+  }
+
+  #add_current_location_b {
+    display: block !important;
+    width: 70% !important;
+    font-size: 20px;
+    padding: 10px;
+    margin: 55px 100px 5px -220px !important;
+  }
+
+  .description_t {
+    height: 20rem !important;
+    font-size: 20px !important;
+  }
+
+  #team_form_d {
+    padding: 2.5rem 0.5rem 0.5rem 0.5rem !important;
+    width: 23rem !important;
+    margin: 0 auto !important;
+  }
+  .team_lead  {
+    font-size: 16px !important;
+  }
+
+  h3, #profileName, .uk-card-title {
+    font-size: 2rem !important;
+  }
+
+  .uk-width-expand {
+    flex: none !important;
+  }
+
+  #profile_picture_img {
+    margin-top: 3px !important;
+  }
+
+  .MuiContainer-root {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .MuiPaper-root, .MuiCard-root, .makeStyles-root-5, .MuiPaper-elevation1, .MuiPaper-rounded {
+    padding: 10px !important;
+  }
+
+  .MuiCard-root {
+    background-image: none !important;
+  }
+
+  .uk-card-body {
+    padding: 0 !important;
+  }
+
+  .github-profile {
+    font-size: 14px !important;
+  }
+
+  .MuiCardContent-root {
+    background-image: none !important;
+    padding: 10px !important;
+  }
+
+  .MuiPaper-root, .MuiCard-root, .makeStyles-root-45, .MuiPaper-elevation1, .MuiPaper-rounded {
+    padding: 10px !important;
+  }
+  
+  .myproject-card {
+    padding: 10px !important;
+  }
+
+  li {
+    list-style-type: none !important
+  }
+
+  #searchUserCard {
+    height: 550px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .menuButton right, .menuButton, .right, nav {
+    display: none;
+  }
+  .menuButton2, .menuButtonLogo2, .right2, .nav-wrapper, nav  {
+    display: initial !important;
+    font-size: 20px !important;
+  }
+  #nav-mobile {
+    font-size: 20px !important;
+  }
+  .MuiPaper-root {font-size: 25px !important;
+  }
+  element.style {
+    top: 24px;
+    left: 300px;
+    font-size: 25px !important;
+  }
+  
+  .MuiMenu-paper {
+    max-height: calc(100% - 500px)!important;
+    font-size: 25px !important;
+  }
+  
+  .MuiPopover-paper {
+    position: absolute;
+    max-width: calc(100% - 100px)!important;
+    min-width: 220px !important;
+    min-height: 280px !important;
+    font-size: 25px !important;
+  }
+  
+  .MuiPaper-root {
+    color: rgb(75, 75, 75) !important;
+  }
+  
+  .MuiButtonBase-root, .MuiListItem-root, .MuiMenuItem-root, .MuiMenuItem-gutters, .MuiListItem-gutters, .MuiListItem-button {
+    font-size: 16px !important;
+  }
+
+  h1 {
+    font-size: 2.5rem !important;
+  }
+
+  h6 {
+    font-size: 0.6rem !important
+  }
+
+  .container {
+    margin: 0 auto !important;
+    width: 96% !important;
+  }
+
+  .uk-slideshow-items {
+  
+    overflow: visible;
+    display: grid;
+    min-height: 200px !important;
+    max-height: 300px !important;
+  }
+
+  #createTeamContainer {
+    background-size: 600px auto !important;
+    width: 340px !important;
+    height: 900px !important;
+    margin: 0 auto;
+    background-image: none !important;
+  }
+
+  .contentContainer {
+    margin: 50px auto !important;
+  }
+
+  .buttons {
+    margin-top: 60px !important;
+    width: 90% !important;
+  }
+
+  #add_current_location_b {
+    display: block !important;
+    width: 70% !important;
+    font-size: 20px;
+    padding: 10px;
+    margin: 55px 100px 5px -220px !important;
+  }
+
+  .description_t {
+    height: 20rem !important;
+    font-size: 20px !important;
+  }
+
+  #team_form_d {
+    padding: 2.5rem 0.5rem 0.5rem 0.5rem !important;
+    width: 23rem !important;
+    margin: 0 auto !important;
+  }
+
+  .team_lead  {
+    font-size: 16px !important;
+  }
+
+  h3, #profileName, .uk-card-title {
+    font-size: 2rem !important;
+  }
+
+  .uk-width-expand {
+    flex: none !important;
+  }
+
+  #profile_picture_img {
+    margin-top: 3px !important;
+  }
+
+  .MuiContainer-root {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .MuiPaper-root, .MuiCard-root, .makeStyles-root-5, .MuiPaper-elevation1, .MuiPaper-rounded {
+    padding: 10px !important;
+  }
+
+  .MuiCard-root {
+    background-image: none !important;
+  }
+
+  .uk-card-body {
+    padding: 0 !important;
+  }
+
+  .github-profile {
+    font-size: 14px !important;
+  }
+
+  .MuiCardContent-root {
+    background-image: none !important;
+    padding: 10px !important;
+  }
+
+  .MuiPaper-root, .MuiCard-root, .makeStyles-root-45, .MuiPaper-elevation1, .MuiPaper-rounded {
+    padding: 10px !important;
+  }
+  
+  .myproject-card {
+    padding: 10px !important;
+  }
+
+  li {
+    list-style-type: none !important
+  }
+
+  #searchUserCard {
+    height: 550px !important;
+  }
+}
+
+textarea {
+  height: 40rem;
+}
+
+.MuiCardContent-root, .makeStyles-root-89 {
   background-image: url("./images/topbar-yellow.png");
   z-index: 10;
   background-repeat: no-repeat;
@@ -114,8 +686,7 @@ li {
   background-position: -20% 50%;
   background-origin: content-box;
   position: relative;
-  padding: 50px 20px 20px 100px !important;
- 
+  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
 }
 
 .MuiCard-root {
@@ -150,12 +721,18 @@ li {
   width: 40%;
 }
 
+element.style {
+  height: 1000px !important;
+}
+
+.MuiMenu-paper {
+  max-height: calc(100% 1000px) !important;
+}
 
 .nav-wrapper {
-  background-image: linear-gradient(to right, #863cfb , #5bb5f9);
-  margin: 0 0 0 0;
-  padding: 5px 5px 5px 5px;
-  width: 100%;
+  margin: 0 0 0 0 !important;
+  padding: 5px 5px 5px 5px !important;
+  width: 100% !important;
 }
 
 nav .nav-wrapper {
@@ -172,7 +749,7 @@ nav .nav-wrapper {
   background-image: linear-gradient(to right, rgb(255,51,215), rgb(255,179,68)); 
   letter-spacing: 0.3rem;
   display: block !important;
-  margin: 50px auto 10px auto !important;
+  margin: 50px auto 10px auto;
   border-radius: 50px !important;
   font-size: 1rem;
   color: black;
@@ -286,16 +863,13 @@ input {
   padding: 10px;
   font-size: 16px;
   background-color: rgb(255,255,255, 0.8);
+  height: 6rem;
 }
 
 .description_t:focus {
   outline: 0;
   border: 1.5px #555454 solid !important;
   font-size: 16px;
-}
-
-textarea {
-  height: 6.5rem !important;
 }
 
 #team_form_d {
@@ -351,7 +925,7 @@ placeholder {
   background-position: -50% 50%;
   background-origin: content-box;
   position: relative;
-  padding: 50px 20px 20px 100px !important;
+  padding: 50px 20px 20px 100px;
 }
 
 .input_form_img {
@@ -582,7 +1156,7 @@ a {
 }
 
 .drop-down-menu {
-  color: black !important;
+  color: rgb(77, 77, 77) !important;
 }
 
 .drop-down-menu:hover {
@@ -600,8 +1174,9 @@ a:hover {
 }
 
 .MuiMenuItem-root {
-  font-family: 'Spartan' !important;
-  color: black !important;
+  font-family: 'Roboto', 'Helvetica', 'Arial', 'sans-serif' !important;
+  color: rgb(77, 77, 77) !important;
+  line-height: 80%;
 }
 
 #simple-menu {
