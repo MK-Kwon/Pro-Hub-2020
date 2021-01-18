@@ -130,8 +130,7 @@ const ProjectProfile = props => {
             {projects.map(project => {
               return (
                 <div className="myproject-card">
-                  <Card style={{ width: "90%", margin: "30px auto", backgroundColor: "rgba(255, 255, 255, 0.95)", padding: "160px, 10px, 5px, 50px" }} id={project._id} key={project._id}>
-                    <CardContent>
+                  <CardContent style={{ width: "98%", margin: "5px", backgroundColor: "rgba(255, 255, 255, 0.95)", padding: "50px 20px 20px 100px" }} id={project._id} key={project._id}>
                       <ul>
                         <li><p className="profile"><span style={{ color: "#863dfa", fontWeight: "900", fontSize: "1rem" }}>Name: </span>{project.project_name}</p></li>
                         <li><p className="profile"><span style={{ color: "#863dfa", fontWeight: "900", fontSize: "1rem" }}>Description: </span>{project.description}</p></li>
@@ -145,7 +144,6 @@ const ProjectProfile = props => {
                         </p></li>
                       </ul>
                     </CardContent>
-                  </Card>
                 </div>
               )
             })}

@@ -7,6 +7,7 @@ import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Logo from '../images/ProHubLogo.png'
 import IconButton from '@material-ui/core/IconButton'
+import Header2 from './Header2'
 
 const Header = props => {
 
@@ -59,6 +60,7 @@ const Header = props => {
         <Link
           to={'/'}
           className="menuButtonLogo" style={{ flex: 1 }} ><img className="logo-img" src={Logo} alt="Logo"></img></Link>
+        
         <button className="menuButton right" aria-controls="simple-menu" aria-haspopup="true" >
           <Link to="/createproject">Create Project</Link>
         </button>
@@ -74,6 +76,7 @@ const Header = props => {
         <div className="right">
           {renderContent()}
         </div>
+        <Header2 />
       </Toolbar>
     </AppBar>
   )

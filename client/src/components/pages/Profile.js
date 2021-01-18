@@ -139,7 +139,7 @@ const Profile = props => {
             </div>
           </div>
           <div id="profile-background" className="uk-card-body">
-            <Card style={{ width: "98%", margin: "2px", padding: "50px 30px 30px 100px", backgroundColor: "rgba(255, 255, 255, 0.78)" }} className={classes.root}>
+            <Card class="profile-padding" style={{ width: "98%", margin: "2px", padding: "50px 30px 30px 100px", backgroundColor: "rgba(255, 255, 255, 0.78)" }} className={classes.root}>
               <ul>
                 <div>
                   <li><p className="profile"><span style={{ color: "#863dfa", fontWeight: "900" }}>Email: </span> {user.email}</p></li>
@@ -152,16 +152,14 @@ const Profile = props => {
                 </div>
               </ul>
             </Card>
-            <br></br>
             <ul>
               <li className="myproject"><p className="profile-project"><span style={{ color: "#505152", fontWeight: "900", fontSize: "1.25rem", margin: "0" }}>My Projects</span></p></li>
             </ul>
             {projects.map(project => {
               console.log(project)
               return (
-                <div className="myproject-card">
-                  <Card style={{ width: "98%", margin: "5px", backgroundColor: "rgba(255, 255, 255, 0.95)", padding: "160px, 10px, 5px, 50px" }} className={classes.root} id={project._id} key={project._id}>
-                    <CardContent>
+                <div>
+                  <CardContent class="project-padding" style={{ width: "98%", margin: "5px", backgroundColor: "rgba(255, 255, 255, 0.95)", padding: "50px 20px 20px 100px" }} className={classes.root} id={project._id} key={project._id}>
                       <ul>
                         <li><p className="profile"><span style={{ color: "#863dfa", fontWeight: "900", fontSize: "1rem" }}>Name: </span>{project.project_name}</p></li>
                         <li><p className="profile"><span style={{ color: "#863dfa", fontWeight: "900", fontSize: "1rem" }}>Description: </span>{project.description}</p></li>
@@ -174,8 +172,7 @@ const Profile = props => {
                           <br />
                         </p></li>
                       </ul>
-                    </CardContent>
-                  </Card>
+                  </CardContent>
                 </div>
               )
             })}

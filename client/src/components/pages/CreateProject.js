@@ -139,7 +139,7 @@ const CreateProject = props => {
               <input
                 value={projectState.location}
                 id="city_i"
-                tyoe="text"
+                type="text"
                 placeholder="Enter Home City"
                 onBlur={(e) => e.target.placeholder = "Enter Home City"}
                 onFocus={(e) => e.target.placeholder = ""}

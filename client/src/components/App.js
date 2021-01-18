@@ -13,6 +13,7 @@ import Header from './Header'
 import Landing from './pages/Landing'
 import EmailUser from './pages/EmailUser'
 import Profile from './pages/Profile'
+import Hamburger from './Hamburger'
 
 class App extends Component {
 
