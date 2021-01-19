@@ -96,7 +96,7 @@ Contributions, issues and feature requests are welcome!<br />Feel free to check 
 👤 **Min Kyung Kwon and James Lee**
 
 * Github: [@MK-Kwon, JLee3849023 ](https://github.com/MK-Kwon, https://github.com/JLee3849023 )
-* LinkedIn: [@min-kyung-kwon](https://linkedin.com/in/min-kyung-kwon)
+* LinkedIn: [@MK-Kwon](https://linkedin.com/in/MK-Kwon)
 
 ## Show your support
 
