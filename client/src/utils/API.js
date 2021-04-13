@@ -1,6 +1,7 @@
 import axios from "axios";
 
-export default {
+const routes = {
+
   // Project Routes
   getProjects: function () {
     return axios.get("/api/projects");
@@ -47,4 +48,4 @@ export default {
 
 }
 
-
+export default routes;
