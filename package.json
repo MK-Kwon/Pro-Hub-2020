@@ -67,7 +67,7 @@
     "react-scroll": "^1.7.9",
     "react-slick": "^0.28.1",
     "react-stripe-checkout": "^2.6.3",
-    "react-swipeable-views": "^0.13.9",
+    "react-swipeable-views": "^0.14.0",
     "react-uikit3": "^0.14.0",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
